@@ -84,16 +84,16 @@ render(){
       <button type="button" id="rollButton" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
 
       <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d2Trigger} />
-      <button type="button" id="rollButton" onClick={this.toggleD2Disabled}>Click to roll</button>
+      <button type="button" id="rollButton" onClick={this.toggleD2Disabled}>{this.state.d2ButtonText}</button>
 
       <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d3Trigger} />
-      <button type="button" id="rollButton" onClick={this.toggleD3Disabled}>Click to roll</button>
+      <button type="button" id="rollButton" onClick={this.toggleD3Disabled}>{this.state.d3ButtonText}</button>
 
       <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d4Trigger} />
-      <button type="button" id="rollButton" onClick={this.toggleD4Disabled}>Click to roll</button>
+      <button type="button" id="rollButton" onClick={this.toggleD4Disabled}>{this.state.d4ButtonText}</button>
 
       <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d5Trigger} />
-      <button type="button" id="rollButton" onClick={this.toggleD5Disabled}>Click to roll</button>
+      <button type="button" id="rollButton" onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
 
     </div>
   )};
