@@ -6,6 +6,7 @@ need to style page and make functions for claculating totals depending on how yo
 Need to make hold/release buttons hide on 3rd roll.
 Need to maybe add text above die showing if it is held or maybe put a border around it and the button?
 Need to figure out best way to pull the die values after 3rd roll for calculating score for each category.
+Maybe add sound for dice rolling (sound property on dice).
 
 
 # Getting Started with Create React App
