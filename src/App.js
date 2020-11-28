@@ -8,11 +8,15 @@ class App extends Component {
     super(props);
     this.state = {
       d1Trigger: "r",
-      d1ButtonText: "Hold",
       d2Trigger: "r",
       d3Trigger: "r",
       d4Trigger: "r",
-      d5Trigger: "r"
+      d5Trigger: "r",
+      d1ButtonText: "Hold",
+      d2ButtonText: "Hold",
+      d3ButtonText: "Hold",
+      d4ButtonText: "Hold",
+      d5ButtonText: "Hold",
     }
   }
 
@@ -30,34 +34,44 @@ toggleD1Disabled = () => {
 toggleD2Disabled = () => {
   if (this.state.d2Trigger === "r") {
     this.setState({d2Trigger: "a"});
+    this.setState({d2ButtonText: "Release"});
   } else {
-    this.setState({d2Trigger: "r"})
+    this.setState({d2Trigger: "r"});
+    this.setState({d2ButtonText: "Hold"});
   }
-}
+};
 
 toggleD3Disabled = () => {
   if (this.state.d3Trigger === "r") {
     this.setState({d3Trigger: "a"});
+    this.setState({d3ButtonText: "Release"});
   } else {
-    this.setState({d3Trigger: "r"})
+    this.setState({d3Trigger: "r"});
+    this.setState({d3ButtonText: "Hold"});
   }
-}
+};
 
 toggleD4Disabled = () => {
   if (this.state.d4Trigger === "r") {
     this.setState({d4Trigger: "a"});
+    this.setState({d4ButtonText: "Release"});
   } else {
-    this.setState({d4Trigger: "r"})
+    this.setState({d4Trigger: "r"});
+    this.setState({d4ButtonText: "Hold"});
   }
 };
 
 toggleD5Disabled = () => {
   if (this.state.d5Trigger === "r") {
     this.setState({d5Trigger: "a"});
+    this.setState({d5ButtonText: "Release"});
   } else {
-    this.setState({d5Trigger: "r"})
+    this.setState({d5Trigger: "r"});
+    this.setState({d5ButtonText: "Hold"});
   }
 };
+
+
 
   
 
