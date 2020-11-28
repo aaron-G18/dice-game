@@ -2,6 +2,8 @@ https://www.npmjs.com/package/react-dice-roll
 react-dice-roll (npm library)
 
 
+need to style page and make functions for claculating totals depending on how you want to score the roll/what category.
+
 
 
 # Getting Started with Create React App
