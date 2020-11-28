@@ -58,6 +58,14 @@ toggleD4Disabled = () => {
   }
 };
 
+toggleD5Disabled = () => {
+  if (this.state.d5Trigger === "r") {
+    this.setState({d5Trigger: "a"});
+  } else {
+    this.setState({d5Trigger: "r"})
+  }
+};
+
   
 
 
