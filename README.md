@@ -3,7 +3,7 @@ react-dice-roll (npm library)
 
 
 need to style page and make functions for claculating totals depending on how you want to score the roll/what category.
-
+Need to make hold/release buttons hide on 3rd roll.
 
 
 # Getting Started with Create React App
