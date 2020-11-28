@@ -17,16 +17,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dieTrigger: "r"
+      d1Trigger: "r",
+      d2Trigger: "r"
     }
   }
 
 
-toggleDisabled = () => {
-  if (this.state.dieTrigger === "r") {
-    this.setState({dieTrigger: "a"});
+toggleD1Disabled = () => {
+  if (this.state.d1Trigger === "r") {
+    this.setState({d1Trigger: "a"});
   } else {
-    this.setState({dieTrigger: "r"})
+    this.setState({d1Trigger: "r"})
+  }
+};
+
+toggleD2Disabled = () => {
+  if (this.state.d2Trigger === "r") {
+    this.setState({d2Trigger: "a"});
+  } else {
+    this.setState({d2Trigger: "r"})
   }
 }
 
@@ -37,8 +46,11 @@ render(){
   return (
     <div className="App">
 
-<Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.dieTrigger} />
-<button type="button" id="rollButton" onClick={this.toggleDisabled}>Click to roll</button>
+<Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d1Trigger} />
+<button type="button" id="rollButton" onClick={this.toggleD1Disabled}>Click to roll</button>
+
+<Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d2Trigger} />
+<button type="button" id="rollButton" onClick={this.toggleD2Disabled}>Click to roll</button>
 
 
       <header className="App-header">
