@@ -1,3 +1,9 @@
+https://www.npmjs.com/package/react-dice-roll
+react-dice-roll (npm library)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
