@@ -4,6 +4,7 @@ import './App.css';
 import Dice from 'react-dice-roll';
 
 
+
 // const rollDice = () => {
 //   let roll = document.createEvent(KeyboardEvent);
 //   roll.initEvent("a", true, true);
@@ -15,16 +16,19 @@ import Dice from 'react-dice-roll';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.ref = React.createRef();
+    this.state = {
+      dieTrigger: "r"
+    }
   }
 
 
-  triggerKeyPress() {
-    let spaceEvnt = new KeyboardEvent('keyup', {"key": "a", "code": "kVK_ANSI_A (0x00)"});
-    document.dispatchEvent(spaceEvnt);
-    console.log(spaceEvnt);
-    
+toggleDisabled = () => {
+  if (this.state.dieTrigger === "r") {
+    this.setState({dieTrigger: "a"});
+  } else {
+    this.setState({dieTrigger: "r"})
   }
+}
 
   
 
@@ -33,8 +37,9 @@ render(){
   return (
     <div className="App">
 
-<Dice onRoll={(value) => console.log(value)} size="50" triggers="a" />
-<button type="button" id="rollButton" onClick={this.triggerKeyPress}>Click to roll</button>
+<Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.dieTrigger} />
+<button type="button" id="rollButton" onClick={this.toggleDisabled}>Click to roll</button>
+
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
