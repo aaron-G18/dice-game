@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Dice from "react-dice-roll";
 
 function Categories(props) {
     return(
