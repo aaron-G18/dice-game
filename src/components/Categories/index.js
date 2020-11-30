@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Dice from "react-dice-roll";
 
 function Categories(props) {
     return(
@@ -7,7 +8,11 @@ function Categories(props) {
             <div className="cat">
                 <img className="die-img" src="./images/one.png" alt="1 on die face"></img><h3 className="cat-label">  Aces = 1</h3>
             </div>
-            <div>twos</div>
+            <div className="cat">
+                <img className="die-img" src="./images/two.png" alt="2 on die face"></img><h3 className="cat-label">  Twos = 2</h3>
+            </div>
+            
+            
         </div>
     );
 }
