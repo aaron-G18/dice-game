@@ -22,6 +22,11 @@ function Categories(props) {
             <div className="cat">
                 <img className="die-img" src="./images/six.png" alt="6 on die face"></img><h3 className="cat-label">   Sixes = 6</h3>
             </div>
+
+            <div className="cat">
+                <h3 className="cat-label">Bonus</h3>
+                <p className="description">If total score is 63 or over</p>
+            </div>
             
             
         </div>
