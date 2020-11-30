@@ -27,8 +27,34 @@ function Categories(props) {
                 <h3 className="cat-label">Bonus</h3>
                 <p className="description">If total score is 63 or over</p>
             </div>
+
+            <div className="cat">
+                <h3 className="cat-label">3 of a kind</h3>  
+            </div>
             
+            <div className="cat">
+                <h3 className="cat-label">4 of a kind</h3>  
+            </div>
+
+            <div className="cat">
+                <h3 className="cat-label">Full House</h3>  
+            </div>
+
+            <div className="cat">
+                <h3 className="cat-label">Small Straight</h3>  
+            </div>
+
+            <div className="cat">
+                <h3 className="cat-label">Large Straight</h3>  
+            </div>
+
+            <div className="cat">
+                <h3 className="cat-label">***Yahtzee***</h3>  
+            </div>
             
+            <div className="cat">
+                <h3 className="cat-label">Chance</h3>  
+            </div>
         </div>
     );
 }
