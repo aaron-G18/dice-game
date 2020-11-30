@@ -8,6 +8,7 @@ react-dice-roll (npm library)
 * Need to figure out best way to pull the die values after 3rd roll for calculating score for each category.
 * Maybe add sound for dice rolling (sound property on dice).
 * *** Might be able to dig into the code for react-dice-roll to change to a click on a button to trigger rolling (so could make mobile friendly) ***
+* Make the dice container a "sticky header" at the top so you can scroll through your score card but still see the dice. 
 
 
 # Getting Started with Create React App
