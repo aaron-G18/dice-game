@@ -49,11 +49,15 @@ function Categories(props) {
             </div>
 
             <div className="cat">
-                <h3 className="cat-label">***Yahtzee***</h3>  
+                <h3 className="cat-label">*5 of a kind*</h3> 
+                <p className="description">You know what it's called  ;)</p> 
             </div>
             
             <div className="cat">
                 <h3 className="cat-label">Chance</h3>  
+            </div>
+            <div className="cat">
+                <h3 className="cat-label">Total Score</h3>  
             </div>
         </div>
     );
