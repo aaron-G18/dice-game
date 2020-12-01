@@ -7,7 +7,7 @@ function Categories(props) {
 
             <table>
                 <tr>
-                    <th></th>
+                    <th id="blank-th"></th>
                     <th>Player 1</th>
                     <th>Player 2</th>
                     <th>Player 3</th>
