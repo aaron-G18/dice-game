@@ -1,12 +1,22 @@
 table, th, td {
     border: 1px solid white;
-    /* border-collapse: collapse; */
+    padding: 10px;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+}
+
+tr {
+    min-height: 50px;
 }
 
 
 
 
 .categories {
+    
     margin-top: 40px;
     clear: both;
     
