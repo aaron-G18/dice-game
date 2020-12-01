@@ -70,7 +70,7 @@ function Categories(props) {
                 <tr>
                     <td>
                         <h3 className="cat-label">Bonus</h3>
-                        <p className="description">If total score is 63 or over</p>
+                        <p className="description">If sum of the above scores is 63 or over = 35</p>
                     </td>
                     <td>Score Here</td>
                     <td>Score Here</td>
