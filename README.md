@@ -2,13 +2,7 @@ https://www.npmjs.com/package/react-dice-roll
 react-dice-roll (npm library)
 
 
-* need to style page and make functions for claculating totals depending on how you want to score the roll/what category.
-* Need to make hold/release buttons hide on 3rd roll.
-* Need to maybe add text above die showing if it is held or maybe put a border around it and the button?
-* Need to figure out best way to pull the die values after 3rd roll for calculating score for each category.
-* Maybe add sound for dice rolling (sound property on dice).
-* *** Might be able to dig into the code for react-dice-roll to change to a click on a button to trigger rolling (so could make mobile friendly) ***
-* Make the dice container a "sticky header" at the top so you can scroll through your score card but still see the dice. (add margin from top so you can see the dice and animation better)
+
 
 
 # Getting Started with Create React App
