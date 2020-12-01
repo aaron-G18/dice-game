@@ -5,6 +5,26 @@ function Categories(props) {
     return(
         <div className="categories">
 
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Player 1</th>
+                    <th>Player 2</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img className="die-img" src="./images/one.png" alt="1 on die face"></img><h3 className="cat-label">   Aces = 1</h3>
+                    </td>
+                    <td>Score Here</td>
+                    <td>Score Here</td>
+                </tr>
+                <tr>
+                    <td>Twos</td>
+                    <td>Score Here</td>
+                    <td>Score Here</td>
+                </tr>
+            </table>
+
             <div>
             <div className="cat">
                 <img className="die-img" src="./images/one.png" alt="1 on die face"></img><h3 className="cat-label">   Aces = 1</h3>
