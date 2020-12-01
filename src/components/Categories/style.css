@@ -1,12 +1,15 @@
 .categories {
     margin-top: 40px;
     clear: both;
+    
 }
 
 .cat {
     width: 20%; 
+    height: 100%;
     border: 1px solid white;
     padding: 10px; 
+    float: left;
 }
 
 .cat-label {
@@ -22,7 +25,15 @@
     
 }
 
+.score {
+    display: inline-block;
+}
+
 
 .description {
     font-size: 1.5vw;
+}
+
+.clear {
+    clear: both;
 }
