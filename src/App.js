@@ -83,9 +83,19 @@ rollCount = (event) => {
   if (event.key === "r") {
     this.setState({rollsLeft: (this.state.rollsLeft - 1)});
   }
+  if (this.state.rollsLeft === 0) {
+    document.removeEventListener("keyup", this.rollCount);
+    this.setState({
+      d1Trigger: "a",
+      d2Trigger: "a",
+      d3Trigger: "a",
+      d4Trigger: "a",
+      d5Trigger: "a"
+    })
+  }
 };
 
-// Add global event listener for keyup.
+// Add global event listener for keyup when App component mounts.
 componentDidMount () {
   document.addEventListener("keyup", this.rollCount);
 };
