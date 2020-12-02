@@ -79,7 +79,7 @@ render(){
       <div className="sticky">
         <div className="dice-container">
           <h2>Rolls left: 3</h2>
-          <div className="die">
+          <div className={this.state.d1ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d1Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
           </div>
