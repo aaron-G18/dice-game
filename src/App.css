@@ -27,14 +27,12 @@ body {
   padding: 10px;
   border: 1px solid white;
   border-radius: 35px;
-  
 }
 
 .die {
   width: 70px;
   float: left;
   text-align: center;
-  
   margin: auto;
 }
 
