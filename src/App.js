@@ -3,11 +3,13 @@ import './App.css';
 import Dice from 'react-dice-roll';
 import Categories from "./components/Categories";
 
+const rollKey = "r";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      rollsLeft: 3,
       d1Trigger: "r",
       d2Trigger: "r",
       d3Trigger: "r",
@@ -18,7 +20,7 @@ class App extends Component {
       d3ButtonText: "Hold",
       d4ButtonText: "Hold",
       d5ButtonText: "Hold",
-    }
+    };
   }
 
 
@@ -72,13 +74,24 @@ toggleD5Disabled = () => {
   }
 };
 
+rollCount = (event) => {
+  if (event.key === rollKey) {
+    this.setState({rollsLeft: (this.state.rollsLeft - 1)});
+  }
+};
+
+
+componentDidMount () {
+  document.addEventListener("keyup", this.rollCount);
+};
+
 
 render(){
   return (
     <div className="app">
       <div className="sticky">
         <div className="dice-container">
-          <h2>Rolls left: 3</h2>
+          <h2>Rolls left: {this.state.rollsLeft}</h2>
           <div className={this.state.d1ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d1Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
