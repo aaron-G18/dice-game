@@ -83,19 +83,19 @@ render(){
             <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d1Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
           </div>
-          <div className="die">
+          <div className={this.state.d2ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d2Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD2Disabled}>{this.state.d2ButtonText}</button>
           </div>
-          <div className="die">
+          <div className={this.state.d3ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d3Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD3Disabled}>{this.state.d3ButtonText}</button>
           </div>
-          <div className="die">
+          <div className={this.state.d4ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d4Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD4Disabled}>{this.state.d4ButtonText}</button>
           </div>
-          <div className="die">
+          <div className={this.state.d5ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d5Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
           </div> 
