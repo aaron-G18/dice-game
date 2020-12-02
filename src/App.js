@@ -21,7 +21,8 @@ class App extends Component {
     };
   }
 
-// Functions to disable the rolling of each individual die (D1 - D5)
+// * Functions to disable the rolling of each individual die (D1 - D5)
+// * D1 roll disable funtion
 toggleD1Disabled = () => {
   if (this.state.d1Trigger === "r") {
     this.setState({d1Trigger: "a"});
@@ -32,6 +33,7 @@ toggleD1Disabled = () => {
   }
 };
 
+// * D2 rolldisable funtion
 toggleD2Disabled = () => {
   if (this.state.d2Trigger === "r") {
     this.setState({d2Trigger: "a"});
@@ -42,6 +44,7 @@ toggleD2Disabled = () => {
   }
 };
 
+// * D3 roll disable funtion
 toggleD3Disabled = () => {
   if (this.state.d3Trigger === "r") {
     this.setState({d3Trigger: "a"});
@@ -52,6 +55,7 @@ toggleD3Disabled = () => {
   }
 };
 
+// * D4 roll disable funtion
 toggleD4Disabled = () => {
   if (this.state.d4Trigger === "r") {
     this.setState({d4Trigger: "a"});
@@ -62,6 +66,7 @@ toggleD4Disabled = () => {
   }
 };
 
+// * D5 roll disable funtion
 toggleD5Disabled = () => {
   if (this.state.d5Trigger === "r") {
     this.setState({d5Trigger: "a"});
