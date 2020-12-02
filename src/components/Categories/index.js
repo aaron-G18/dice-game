@@ -4,7 +4,6 @@ import "./style.css";
 function Categories(props) {
     return(
         <div className="categories">
-
             <table>
                 <tr>
                     <th id="blank-th"></th>
@@ -151,10 +150,8 @@ function Categories(props) {
                     <td>Score Here</td>
                 </tr>
             </table>
- 
-
         </div>
     );
-}
+};
 
 export default Categories;
