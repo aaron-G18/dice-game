@@ -3,8 +3,6 @@ import './App.css';
 import Dice from 'react-dice-roll';
 import Categories from "./components/Categories";
 
-const rollKey = "r";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +21,7 @@ class App extends Component {
     };
   }
 
-
+// Functions to disable the rolling of each individual die (D1 - D5)
 toggleD1Disabled = () => {
   if (this.state.d1Trigger === "r") {
     this.setState({d1Trigger: "a"});
@@ -74,13 +72,15 @@ toggleD5Disabled = () => {
   }
 };
 
+
+// Function to decrement the roll count if the keyup event is the r key.
 rollCount = (event) => {
-  if (event.key === rollKey) {
+  if (event.key === "r") {
     this.setState({rollsLeft: (this.state.rollsLeft - 1)});
   }
 };
 
-
+// Add global event listener for keyup.
 componentDidMount () {
   document.addEventListener("keyup", this.rollCount);
 };
