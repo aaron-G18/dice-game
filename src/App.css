@@ -3,19 +3,31 @@ body {
   color: whitesmoke;
 }
 
+.sticky {
+  border: 5px solid grey;
+  background-color: #313131;
+  padding: 20px;
+  position: fixed;
+  top: 0px;
+  width: 90%;
+  margin-left: 30px;
+}
+
 .app {
   text-align: center;
 }
 
 .dice-container {
+  opacity: 1;
+  z-index: 2;
   text-align: center;
-  margin: auto;
-  margin-top: 40px;
   height: 160px;
   width: 350px;
+  margin: auto;
   padding: 10px;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 35px;
+  
 }
 
 .die {
@@ -26,9 +38,7 @@ body {
   margin: auto;
 }
 
-.roll-button {
-  
-}
+
 
 
 

@@ -80,6 +80,9 @@ toggleD5Disabled = () => {
 render(){
   return (
     <div className="app">
+
+      <div className="sticky">
+
       <div className="dice-container">
         <h2>Rolls left: 3</h2>
         <div className="die">
@@ -107,6 +110,9 @@ render(){
         <button type="button" className="roll-button" onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
         </div>
         
+      </div>
+      
+
       </div>
       <div className="categories-container">
         <Categories />
