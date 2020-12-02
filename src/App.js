@@ -73,50 +73,37 @@ toggleD5Disabled = () => {
 };
 
 
-
-  
-
-
 render(){
   return (
     <div className="app">
-
       <div className="sticky">
-
-      <div className="dice-container">
-        <h2>Rolls left: 3</h2>
-        <div className="die">
-          <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d1Trigger} />
-          <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
+        <div className="dice-container">
+          <h2>Rolls left: 3</h2>
+          <div className="die">
+            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d1Trigger} />
+            <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
+          </div>
+          <div className="die">
+            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d2Trigger} />
+            <button type="button" className="roll-button" onClick={this.toggleD2Disabled}>{this.state.d2ButtonText}</button>
+          </div>
+          <div className="die">
+            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d3Trigger} />
+            <button type="button" className="roll-button" onClick={this.toggleD3Disabled}>{this.state.d3ButtonText}</button>
+          </div>
+          <div className="die">
+            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d4Trigger} />
+            <button type="button" className="roll-button" onClick={this.toggleD4Disabled}>{this.state.d4ButtonText}</button>
+          </div>
+          <div className="die">
+            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d5Trigger} />
+            <button type="button" className="roll-button" onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
+          </div> 
         </div>
-
-        <div className="die">
-        <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d2Trigger} />
-        <button type="button" className="roll-button" onClick={this.toggleD2Disabled}>{this.state.d2ButtonText}</button>
         </div>
-
-        <div className="die">
-        <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d3Trigger} />
-        <button type="button" className="roll-button" onClick={this.toggleD3Disabled}>{this.state.d3ButtonText}</button>
+          <div className="categories-container">
+            <Categories />
         </div>
-
-        <div className="die">
-        <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d4Trigger} />
-        <button type="button" className="roll-button" onClick={this.toggleD4Disabled}>{this.state.d4ButtonText}</button>
-        </div>
-
-        <div className="die">
-        <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d5Trigger} />
-        <button type="button" className="roll-button" onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
-        </div>
-        
-      </div>
-      
-
-      </div>
-      <div className="categories-container">
-        <Categories />
-      </div>
     </div>
   )};
 }
