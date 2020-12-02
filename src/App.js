@@ -78,7 +78,7 @@ toggleD5Disabled = () => {
 };
 
 
-// Function to decrement the roll count if the keyup event is the r key.
+// Function to decrement the roll count if the keyup event is the r key and to "lock out" dice rolling if 0 rolls left.
 rollCount = (event) => {
   if (event.key === "r") {
     this.setState({rollsLeft: (this.state.rollsLeft - 1)});
