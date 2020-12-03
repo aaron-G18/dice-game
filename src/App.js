@@ -19,6 +19,10 @@ class App extends Component {
       d4ButtonText: "Hold",
       d5ButtonText: "Hold",
       d1Value: 0,
+      d2Value: 0,
+      d3Value: 0,
+      d4Value: 0,
+      d5Value: 0,
     };  
   }
 
@@ -100,6 +104,18 @@ calcAcesScore = () => {
   let sum = 0;
   if (this.state.d1Value === 1) {
     sum += this.state.d1Value;
+  };
+  if (this.state.d2Value === 1){
+    sum += this.state.d2Value;
+  }
+  if (this.state.d3Value === 1){
+    sum += this.state.d3Value;
+  }
+  if (this.state.d4Value === 1){
+    sum += this.state.d4Value;
+  }
+  if (this.state.d5Value === 1){
+    sum += this.state.d5Value;
   }
   console.log("Aces Sum = ", sum);
   return sum;
@@ -122,19 +138,19 @@ render(){
             <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
           </div>
           <div className={this.state.d2ButtonText === "Release" ? "die held" : "die"}>
-            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d2Trigger} />
+            <Dice onRoll={(value) => this.setState({d2Value: value})} size="50" triggers={this.state.d2Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD2Disabled}>{this.state.d2ButtonText}</button>
           </div>
           <div className={this.state.d3ButtonText === "Release" ? "die held" : "die"}>
-            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d3Trigger} />
+            <Dice onRoll={(value) => this.setState({d3Value: value})} size="50" triggers={this.state.d3Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD3Disabled}>{this.state.d3ButtonText}</button>
           </div>
           <div className={this.state.d4ButtonText === "Release" ? "die held" : "die"}>
-            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d4Trigger} />
+            <Dice onRoll={(value) => this.setState({d4Value: value})} size="50" triggers={this.state.d4Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD4Disabled}>{this.state.d4ButtonText}</button>
           </div>
           <div className={this.state.d5ButtonText === "Release" ? "die held" : "die"}>
-            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d5Trigger} />
+            <Dice onRoll={(value) => this.setState({d5Value: value})} size="50" triggers={this.state.d5Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
           </div> 
         </div>
