@@ -19,7 +19,7 @@ function Categories(props) {
                         <td>
                             <img className="die-img" src="./images/one.png" alt="1 on die face"></img><h3 className="cat-label">   Aces = 1</h3>
                         </td>   
-                        <td>Score Here</td>
+                        <td><button type="button" className="score-button" >Record Score</button></td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>

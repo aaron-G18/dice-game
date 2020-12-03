@@ -21,11 +21,11 @@ class App extends Component {
     };
   }
 
-// * Functions to disable the rolling of each individual die (D1 - D5)
+// * Functions to disable the rolling of each individual die (D1 - D5) by changing the trigger for the die.
 // * D1 roll disable funtion
 toggleD1Disabled = () => {
   if (this.state.d1Trigger === "r") {
-    this.setState({d1Trigger: "a"});
+    this.setState({d1Trigger: "nope"});
     this.setState({d1ButtonText: "Release"});
   } else {
     this.setState({d1Trigger: "r"});
@@ -36,7 +36,7 @@ toggleD1Disabled = () => {
 // * D2 rolldisable funtion
 toggleD2Disabled = () => {
   if (this.state.d2Trigger === "r") {
-    this.setState({d2Trigger: "a"});
+    this.setState({d2Trigger: "nope"});
     this.setState({d2ButtonText: "Release"});
   } else {
     this.setState({d2Trigger: "r"});
@@ -47,7 +47,7 @@ toggleD2Disabled = () => {
 // * D3 roll disable funtion
 toggleD3Disabled = () => {
   if (this.state.d3Trigger === "r") {
-    this.setState({d3Trigger: "a"});
+    this.setState({d3Trigger: "nope"});
     this.setState({d3ButtonText: "Release"});
   } else {
     this.setState({d3Trigger: "r"});
@@ -58,7 +58,7 @@ toggleD3Disabled = () => {
 // * D4 roll disable funtion
 toggleD4Disabled = () => {
   if (this.state.d4Trigger === "r") {
-    this.setState({d4Trigger: "a"});
+    this.setState({d4Trigger: "nope"});
     this.setState({d4ButtonText: "Release"});
   } else {
     this.setState({d4Trigger: "r"});
@@ -69,7 +69,7 @@ toggleD4Disabled = () => {
 // * D5 roll disable funtion
 toggleD5Disabled = () => {
   if (this.state.d5Trigger === "r") {
-    this.setState({d5Trigger: "a"});
+    this.setState({d5Trigger: "nope"});
     this.setState({d5ButtonText: "Release"});
   } else {
     this.setState({d5Trigger: "r"});
@@ -78,7 +78,7 @@ toggleD5Disabled = () => {
 };
 
 
-// Function to decrement the roll count if the keyup event is the r key and to "lock out" dice rolling if 0 rolls left.
+// Function to decrement the roll count if the keyup event is the "r" key and to "lock out" dice rolling if 0 rolls left by changing the trigger of all the dice.
 rollCount = (event) => {
   if (event.key === "r") {
     this.setState({rollsLeft: (this.state.rollsLeft - 1)});
@@ -86,11 +86,11 @@ rollCount = (event) => {
   if (this.state.rollsLeft === 0) {
     document.removeEventListener("keyup", this.rollCount);
     this.setState({
-      d1Trigger: "a",
-      d2Trigger: "a",
-      d3Trigger: "a",
-      d4Trigger: "a",
-      d5Trigger: "a"
+      d1Trigger: "nope",
+      d2Trigger: "nope",
+      d3Trigger: "nope",
+      d4Trigger: "nope",
+      d5Trigger: "nope"
     })
   }
 };

@@ -3,6 +3,10 @@ body {
   color: whitesmoke;
 }
 
+.roll-button:hover {
+  cursor: pointer;
+}
+
 .sticky {
   border: 5px solid grey;
   background-color: #313131;
