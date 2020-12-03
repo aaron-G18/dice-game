@@ -18,7 +18,8 @@ class App extends Component {
       d3ButtonText: "Hold",
       d4ButtonText: "Hold",
       d5ButtonText: "Hold",
-    };
+      d1Value: 0,
+    };  
   }
 
 // * Functions to disable the rolling of each individual die (D1 - D5) by changing the trigger for the die.
@@ -95,6 +96,15 @@ rollCount = (event) => {
   }
 };
 
+calcAcesScore = () => {
+  let sum = 0;
+  if (this.state.d1Value === 1) {
+    sum += this.state.d1Value;
+  }
+  console.log("Aces Sum = ", sum);
+  return sum;
+};
+
 // Add global event listener for keyup when App component mounts.
 componentDidMount () {
   document.addEventListener("keyup", this.rollCount);
@@ -108,7 +118,7 @@ render(){
         <div className="dice-container">
           <h2>Rolls left: {this.state.rollsLeft}</h2>
           <div className={this.state.d1ButtonText === "Release" ? "die held" : "die"}>
-            <Dice onRoll={(value) => console.log(value)} size="50" triggers={this.state.d1Trigger} />
+            <Dice onRoll={(value) => this.setState({d1Value: value})} size="50" triggers={this.state.d1Trigger} />
             <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
           </div>
           <div className={this.state.d2ButtonText === "Release" ? "die held" : "die"}>
@@ -130,7 +140,7 @@ render(){
         </div>
         </div>
           <div className="categories-container">
-            <Categories {...this.state}/>
+            <Categories calcAcesScore={this.calcAcesScore} {...this.state}/>
         </div>
     </div>
   )};
