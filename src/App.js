@@ -130,7 +130,7 @@ render(){
         </div>
         </div>
           <div className="categories-container">
-            <Categories />
+            <Categories {...this.state}/>
         </div>
     </div>
   )};
