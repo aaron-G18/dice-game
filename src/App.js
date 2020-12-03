@@ -113,6 +113,19 @@ calcAcesScore = () => {
   return sum;
 };
 
+
+calcTwosScore = () => {
+  let sum = 0;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  for (let i = 0; i < diceValuesArr.length; i++){    
+    if (diceValuesArr[i] === 2) {
+      sum += diceValuesArr[i];
+    };
+  };
+  console.log("Twos score = ", sum);
+  return sum;
+};
+
 // Add global event listener for keyup when App component mounts.
 componentDidMount () {
   document.addEventListener("keyup", this.rollCount);
@@ -148,7 +161,10 @@ render(){
         </div>
         </div>
           <div className="categories-container">
-            <Categories calcAcesScore={this.calcAcesScore} {...this.state}/>
+            <Categories 
+              calcAcesScore={this.calcAcesScore}
+              calcTwosScore={this.calcTwosScore}
+              {...this.state}/>
         </div>
     </div>
   )};
