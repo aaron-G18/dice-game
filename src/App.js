@@ -102,21 +102,14 @@ rollCount = (event) => {
 
 calcAcesScore = () => {
   let sum = 0;
-  if (this.state.d1Value === 1) {
-    sum += this.state.d1Value;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  for (let i = 0; i < diceValuesArr.length; i++){
+    console.log("DV = ", diceValuesArr[i]);
+    if (diceValuesArr[i] === 1) {
+      console.log("DV[" + i + "] = ", diceValuesArr[i]);
+      sum += diceValuesArr[i];
+    };
   };
-  if (this.state.d2Value === 1){
-    sum += this.state.d2Value;
-  }
-  if (this.state.d3Value === 1){
-    sum += this.state.d3Value;
-  }
-  if (this.state.d4Value === 1){
-    sum += this.state.d4Value;
-  }
-  if (this.state.d5Value === 1){
-    sum += this.state.d5Value;
-  }
   console.log("Aces Sum = ", sum);
   return sum;
 };
