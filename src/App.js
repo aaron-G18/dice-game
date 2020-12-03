@@ -100,6 +100,7 @@ rollCount = (event) => {
   }
 };
 
+// function to calculate score for Aces (pass function to component to be on click for score button)
 calcAcesScore = () => {
   let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
