@@ -107,6 +107,10 @@ dieFrequency = () => {
 };
 
 
+// Function to check for "runs" to find Sm and Lg straights.
+
+
+
 
 // Function to calculate score for Aces (pass function to component to be on click for score button)
 calcAcesScore = () => {
