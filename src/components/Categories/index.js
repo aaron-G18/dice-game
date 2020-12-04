@@ -44,7 +44,9 @@ function Categories(props) {
                         <td>
                             <img className="die-img" src="./images/three.png" alt="3 on die face"></img><h3 className="cat-label">   Threes = 3</h3>
                         </td>
-                        <td><button type="button" className="score-button" onClick={props.calcThreesScore} >Record Score</button></td>
+                        <td>
+                            <button type="button" className="score-button" onClick={props.calcThreesScore} >Record Score</button>
+                        </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -54,7 +56,9 @@ function Categories(props) {
                         <td>
                             <img className="die-img" src="./images/four.png" alt="4 on die face"></img><h3 className="cat-label">   Fours = 4</h3>
                         </td>
-                        <td>Score Here</td>
+                        <td>
+                            <button type="button" className="score-button" onClick={props.calcFoursScore}>Record Score</button>
+                        </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
