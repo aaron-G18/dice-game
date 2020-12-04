@@ -101,7 +101,8 @@ function Categories(props) {
                 {/* 3 of a kind row */}
                     <tr>
                         <td>
-                            <h3 className="cat-label">3 of a kind</h3> 
+                            <h3 className="cat-label">3 of a kind</h3>
+                            <p className="description">Sum of the three matching dice values</p>
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -112,6 +113,7 @@ function Categories(props) {
                     <tr>
                         <td>
                             <h3 className="cat-label">4 of a kind</h3>
+                            <p className="description">Sum of the four matching dice values</p>
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -121,7 +123,7 @@ function Categories(props) {
                 {/* Full House row */}
                     <tr>
                         <td>
-                            <h3 className="cat-label">Full House</h3>
+                            <h3 className="cat-label">Full House (25 pts)</h3>
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -131,7 +133,7 @@ function Categories(props) {
                 {/* Sm Straight row */}
                     <tr>
                         <td>
-                            <h3 className="cat-label">Sm Straight</h3>
+                            <h3 className="cat-label">Sm Straight (30 pts)</h3>
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -141,7 +143,7 @@ function Categories(props) {
                 {/* Lg Straight row */}
                     <tr>
                         <td>
-                            <h3 className="cat-label">Lg Straight</h3>
+                            <h3 className="cat-label">Lg Straight (40 pts)</h3>
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -151,7 +153,7 @@ function Categories(props) {
                 {/* 5 of a kind row */}
                     <tr>
                         <td>
-                            <h3 className="cat-label">*5 of a kind*</h3> 
+                            <h3 className="cat-label">*5 of a kind* (50 pts)</h3> 
                             <p className="description">You know what it's called  ;)</p> 
                         </td>
                         <td>Score Here</td>
