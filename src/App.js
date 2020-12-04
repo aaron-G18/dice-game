@@ -152,6 +152,19 @@ calcFoursScore = () => {
   return sum;
 };
 
+// function to calculate score for Fives (pass function to component to be on click for score button)
+calcFivesScore = () => {
+  let sum = 0;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  for (let i = 0; i < diceValuesArr.length; i++){    
+    if (diceValuesArr[i] === 5) {
+      sum += diceValuesArr[i];
+    };
+  };
+  console.log("Fives score = ", sum);
+  return sum;
+};
+
 
 // Add global event listener for keyup when App component mounts.
 componentDidMount () {
@@ -193,6 +206,7 @@ render(){
               calcTwosScore={this.calcTwosScore}
               calcThreesScore={this.calcThreesScore}
               calcFoursScore={this.calcFoursScore}
+              calcFivesScore={this.calcFivesScore}
               {...this.state}/>
         </div>
     </div>
