@@ -100,7 +100,14 @@ rollCount = (event) => {
   }
 };
 
-// function to calculate score for Aces (pass function to component to be on click for score button)
+// Function to count frequency of each number in dice array.
+dieFrequency = () => {
+  
+};
+
+
+
+// Function to calculate score for Aces (pass function to component to be on click for score button)
 calcAcesScore = () => {
   let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
@@ -113,7 +120,7 @@ calcAcesScore = () => {
   return sum;
 };
 
-// function to calculate score for Twos (pass function to component to be on click for score button)
+// Function to calculate score for Twos (pass function to component to be on click for score button)
 calcTwosScore = () => {
   let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
@@ -126,7 +133,7 @@ calcTwosScore = () => {
   return sum;
 };
 
-// function to calculate score for Threes (pass function to component to be on click for score button)
+// Function to calculate score for Threes (pass function to component to be on click for score button)
 calcThreesScore = () => {
   let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
@@ -139,7 +146,7 @@ calcThreesScore = () => {
   return sum;
 };
 
-// function to calculate score for Fours (pass function to component to be on click for score button)
+// Function to calculate score for Fours (pass function to component to be on click for score button)
 calcFoursScore = () => {
   let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
@@ -152,7 +159,7 @@ calcFoursScore = () => {
   return sum;
 };
 
-// function to calculate score for Fives (pass function to component to be on click for score button)
+// Function to calculate score for Fives (pass function to component to be on click for score button)
 calcFivesScore = () => {
   let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
@@ -165,7 +172,7 @@ calcFivesScore = () => {
   return sum;
 };
 
-// function to calculate score for Sixes (pass function to component to be on click for score button)
+// Function to calculate score for Sixes (pass function to component to be on click for score button)
 calcSixesScore = () => {
   let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
@@ -183,7 +190,6 @@ calcSixesScore = () => {
 componentDidMount () {
   document.addEventListener("keyup", this.rollCount);
 };
-
 
 render(){
   return (
