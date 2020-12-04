@@ -108,7 +108,7 @@ dieFrequency = () => {
 
 
 // Function to check for "runs" to find Sm and Lg straights.
-
+//(sort array, then loop over array and check for consecutive numbers)
 
 
 
@@ -189,6 +189,9 @@ calcSixesScore = () => {
   console.log("Sixes score = ", sum);
   return sum;
 };
+
+
+
 
 // Function to calculate chance total (sum of all die values)
 calcChanceScore = () => {
