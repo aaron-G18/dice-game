@@ -190,6 +190,13 @@ calcSixesScore = () => {
   return sum;
 };
 
+// Function to calculate chance total (sum of all die values)
+calcChanceScore = () => {
+  let sum = (this.state.d1Value + this.state.d2Value + this.state.d3Value + this.state.d4Value + this.state.d5Value);
+  console.log("Chance Sum = ", sum);
+  return sum;
+}
+
 
 // Add global event listener for keyup when App component mounts.
 componentDidMount () {
@@ -232,6 +239,8 @@ render(){
               calcFoursScore={this.calcFoursScore}
               calcFivesScore={this.calcFivesScore}
               calcSixesScore={this.calcSixesScore}
+
+              calcChanceScore={this.calcChanceScore}
               {...this.state}/>
         </div>
     </div>
