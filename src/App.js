@@ -110,93 +110,95 @@ rollCount = (event) => {
 
 // Function to calculate score for Aces (pass function to component to be on click for score button)
 calcAcesScore = () => {
-  let sum = 0;
+  let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   for (let i = 0; i < diceValuesArr.length; i++){    
     if (diceValuesArr[i] === 1) {
-      sum += diceValuesArr[i];
+      score += diceValuesArr[i];
     };
   };
-  console.log("Aces score = ", sum);
-  return sum;
+  console.log("Aces score = ", score);
+  return score;
 };
 
 // Function to calculate score for Twos (pass function to component to be on click for score button)
 calcTwosScore = () => {
-  let sum = 0;
+  let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   for (let i = 0; i < diceValuesArr.length; i++){    
     if (diceValuesArr[i] === 2) {
-      sum += diceValuesArr[i];
+      score += diceValuesArr[i];
     };
   };
-  console.log("Twos score = ", sum);
-  return sum;
+  console.log("Twos score = ", score);
+  return score;
 };
 
 // Function to calculate score for Threes (pass function to component to be on click for score button)
 calcThreesScore = () => {
-  let sum = 0;
+  let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   for (let i = 0; i < diceValuesArr.length; i++){    
     if (diceValuesArr[i] === 3) {
-      sum += diceValuesArr[i];
+      score += diceValuesArr[i];
     };
   };
-  console.log("Threes score = ", sum);
-  return sum;
+  console.log("Threes score = ", score);
+  return score;
 };
 
 // Function to calculate score for Fours (pass function to component to be on click for score button)
 calcFoursScore = () => {
-  let sum = 0;
+  let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   for (let i = 0; i < diceValuesArr.length; i++){    
     if (diceValuesArr[i] === 4) {
-      sum += diceValuesArr[i];
+      score += diceValuesArr[i];
     };
   };
-  console.log("Fours score = ", sum);
-  return sum;
+  console.log("Fours score = ", score);
+  return score;
 };
 
 // Function to calculate score for Fives (pass function to component to be on click for score button)
 calcFivesScore = () => {
-  let sum = 0;
+  let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   for (let i = 0; i < diceValuesArr.length; i++){    
     if (diceValuesArr[i] === 5) {
-      sum += diceValuesArr[i];
+      score += diceValuesArr[i];
     };
   };
-  console.log("Fives score = ", sum);
-  return sum;
+  console.log("Fives score = ", score);
+  return score;
 };
 
 // Function to calculate score for Sixes (pass function to component to be on click for score button)
 calcSixesScore = () => {
-  let sum = 0;
+  let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   for (let i = 0; i < diceValuesArr.length; i++){    
     if (diceValuesArr[i] === 6) {
-      sum += diceValuesArr[i];
+      score += diceValuesArr[i];
     };
   };
-  console.log("Sixes score = ", sum);
-  return sum;
+  console.log("Sixes score = ", score);
+  return score;
 };
 
 // Function to calculate score for a full house.
 calcFullHouse = () => {
-  let sum = 0;
+  let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   let dice = {};
   let hasThreeOfKind = false;
   let hasTwoOfKind = false;
+  // Count frequency of each value for the dice and put into "dice" object.
   for (let val of diceValuesArr) {
     dice[val] = (dice[val] || 0) + 1;
   };
   console.log("dice freq = ", dice);
+  // for each "key: value" pair in the created "dice" object, check if a value of 2 and 3 both exist (meaning a full house) and toggle the booleans for each.
   for (let val in dice) {
     if(dice[val] === 3) {
       hasThreeOfKind = true;
@@ -207,19 +209,22 @@ calcFullHouse = () => {
   };
   console.log("has 3ofKind = ", hasThreeOfKind);
   console.log("has 2ofKind = ", hasTwoOfKind);
+  // if both booleans are true, return the 25 point value as "score.""
   if(hasTwoOfKind && hasThreeOfKind) {
-    sum = 25;
-  }
-  console.log("Full House! = ", sum);
-  return sum;
+    score = 25;
+  } else {
+    score = 0;
+  };
+  console.log("Full House score = ", score);
+  return score;
 };
 
 
-// Function to calculate chance total (sum of all die values)
+// Function to calculate chance total (score of all die values)
 calcChanceScore = () => {
-  let sum = (this.state.d1Value + this.state.d2Value + this.state.d3Value + this.state.d4Value + this.state.d5Value);
-  console.log("Chance Sum = ", sum);
-  return sum;
+  let score = (this.state.d1Value + this.state.d2Value + this.state.d3Value + this.state.d4Value + this.state.d5Value);
+  console.log("Chance Sum = ", score);
+  return score;
 }
 
 
