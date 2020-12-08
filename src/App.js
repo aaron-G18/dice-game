@@ -100,11 +100,7 @@ rollCount = (event) => {
   }
 };
 
-// Function to calculate score for a full house.
-// ** (need to make a frequency counter to get thr frequencies of each possible die value to use in finding full house, 3 of a kind, 4 of a kind, and 5 of a kind)
-calcFullHouse = () => {
-  
-};
+
 
 
 // Function to check for "runs" to find Sm and Lg straights.
@@ -190,7 +186,33 @@ calcSixesScore = () => {
   return sum;
 };
 
+// Function to calculate score for a full house.
+// ** (need to make a frequency counter to get thr frequencies of each possible die value to use in finding full house, 3 of a kind, 4 of a kind, and 5 of a kind)
+calcFullHouse = () => {
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  let dice = {};
+  let has3ofKind = false;
+  let has2ofKind = false;
+  for (let val of diceValuesArr) {
+    dice[val] = (dice[val] || 0) + 1;
+  };
+  console.log("dice freq = ", dice);
 
+  // dice freq =  {1: 3, 4: 2}
+
+  for (let val in dice) {
+    if(dice[val] === 3) {
+      has3ofKind = true;
+    };
+    if(dice[val] === 2) {
+      has2ofKind = true;
+    }
+  };
+
+  console.log("has 3ofKind = ", has3ofKind);
+  console.log("has 2ofKind = ", has2ofKind);
+  
+};
 
 
 // Function to calculate chance total (sum of all die values)
@@ -242,7 +264,7 @@ render(){
               calcFoursScore={this.calcFoursScore}
               calcFivesScore={this.calcFivesScore}
               calcSixesScore={this.calcSixesScore}
-
+              calcFullHouse={this.calcFullHouse}
               calcChanceScore={this.calcChanceScore}
               {...this.state}/>
         </div>
