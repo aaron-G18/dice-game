@@ -203,7 +203,6 @@ calcFullHouse = () => {
   for (let val of diceValuesArr) {
     dice[val] = (dice[val] || 0) + 1;
   };
-  console.log("dice freq = ", dice);
   // for each "key: value" pair in the created "dice" object, check if a value of 2 and 3 both exist (meaning a full house) and toggle the booleans for each.
   for (let val in dice) {
     if(dice[val] === 3) {
@@ -213,15 +212,12 @@ calcFullHouse = () => {
       hasTwoOfKind = true;
     }
   };
-  console.log("has 3ofKind = ", hasThreeOfKind);
-  console.log("has 2ofKind = ", hasTwoOfKind);
   // if both booleans are true, return the 25 point value as "score.""
   if(hasTwoOfKind && hasThreeOfKind) {
     score = 25;
   } else {
     score = 0;
   };
-  console.log("Full House score = ", score);
   return score;
 };
 
