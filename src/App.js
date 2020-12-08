@@ -194,32 +194,25 @@ calcFullHouse = () => {
   let dice = {};
   let hasThreeOfKind = false;
   let hasTwoOfKind = false;
-  let threeOfKindSum = 0;
-  let twoOfKindSum = 0;
   for (let val of diceValuesArr) {
     dice[val] = (dice[val] || 0) + 1;
   };
   console.log("dice freq = ", dice);
-
-  // dice freq =  {1: 3, 4: 2}
-
   for (let val in dice) {
     if(dice[val] === 3) {
       hasThreeOfKind = true;
-      threeOfKindSum = val * 3;
-      console.log("threeOfKindSum = ", threeOfKindSum);
     };
     if(dice[val] === 2) {
       hasTwoOfKind = true;
     }
   };
-
   console.log("has 3ofKind = ", hasThreeOfKind);
   console.log("has 2ofKind = ", hasTwoOfKind);
   if(hasTwoOfKind && hasThreeOfKind) {
-
+    sum = 25;
   }
-  
+  console.log("Full House! = ", sum);
+  return sum;
 };
 
 
