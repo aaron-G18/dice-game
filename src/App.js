@@ -192,6 +192,15 @@ calcSixesScore = () => {
   return score;
 };
 
+// Function to calculate if you get the bonus or not.
+
+
+// Function to calculate score for 3 of a kind.
+
+
+// Funtion to calculate score for 4 of a kind.
+
+
 // Function to calculate score for a full house.
 calcFullHouse = () => {
   let score = 0;
@@ -220,6 +229,15 @@ calcFullHouse = () => {
   };
   return score;
 };
+
+// Function to calculate score for Sm Straight
+
+
+// Function to calculate score for Lg Straight
+
+
+// Function to calculate score for "5 of a kind."
+
 
 
 // Function to calculate chance total (score of all die values)
