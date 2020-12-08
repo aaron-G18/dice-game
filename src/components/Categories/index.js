@@ -23,7 +23,7 @@ function Categories(props) {
                         <td>
                             <button type="button" className="score-button" onClick={props.calcAcesScore} >Record Score</button>
                         </td>
-                        <td>{props.d1Trigger}</td>
+                        <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                     </tr>
