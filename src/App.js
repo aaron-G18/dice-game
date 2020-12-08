@@ -326,6 +326,7 @@ render(){
               calcSixesScore={this.calcSixesScore}
 
               calcThreeOfKind={this.calcThreeOfKind}
+              calcFourOfKind={this.calcFourOfKind}
               calcFullHouse={this.calcFullHouse}
 
               calcChanceScore={this.calcChanceScore}
