@@ -345,6 +345,7 @@ render(){
               calcFourOfKind={this.calcFourOfKind}
               calcFullHouse={this.calcFullHouse}
 
+              calcFiveOfKind={this.calcFiveOfKind}
               calcChanceScore={this.calcChanceScore}
               {...this.state}/>
         </div>
