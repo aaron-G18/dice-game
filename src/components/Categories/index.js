@@ -162,7 +162,9 @@ function Categories(props) {
                             <h3 className="cat-label">*5 of a kind* (50 pts)</h3> 
                             <p className="description">You know what it's called  ;)</p> 
                         </td>
-                        <td>Score Here</td>
+                        <td>
+                            <button type="button" className="score-button" onClick={props.calcFiveOfKind}>Record Score</button>
+                        </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
