@@ -106,7 +106,10 @@ rollCount = (event) => {
   }
 };
 
-// ******  Will need to make functionality for locking out scoring when you record a score until you roll again.
+
+// ****** TO DO LIST ********* 
+// - Will need to make functionality for locking out scoring when you record a score until you roll again.
+// - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
 
 
 // Function to check for "runs" to find Sm and Lg straights.
@@ -347,7 +350,7 @@ render(){
 
               calcFiveOfKind={this.calcFiveOfKind}
               calcChanceScore={this.calcChanceScore}
-              {...this.state}/>
+              />
         </div>
     </div>
   )};
