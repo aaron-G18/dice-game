@@ -104,7 +104,9 @@ function Categories(props) {
                             <h3 className="cat-label">3 of a kind</h3>
                             <p className="description">Sum of the three matching dice values</p>
                         </td>
-                        <td>Score Here</td>
+                        <td>
+                            <button type="button" className="score-button" onClick={props.calcThreeOfKind}>Record Score</button>
+                        </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>

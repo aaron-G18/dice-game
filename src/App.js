@@ -106,7 +106,7 @@ rollCount = (event) => {
   }
 };
 
-
+// ******  Will need to make functionality for locking out scoring when you record a score until you roll again.
 
 
 // Function to check for "runs" to find Sm and Lg straights.
@@ -227,10 +227,30 @@ calcFullHouse = () => {
   } else {
     score = 0;
   };
+  console.log("full house score = ", score);
   return score;
 };
 
 // Function to calculate score for Sm Straight
+calcThreeOfKind = () => {
+  let score = 0;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  let dice = {};
+  // Count frequency of each value for the dice and put into "dice" object.
+  for (let val of diceValuesArr) {
+    dice[val] = (dice[val] || 0) + 1;
+  };
+  // for each "key: value" pair in the created "dice" object, check if a value of 2 and 3 both exist (meaning a full house) and toggle the booleans for each.
+  for (let val in dice) {
+    if(dice[val] >= 3) {
+      score = val * 3;
+    };
+  };
+  console.log("score = ", score);
+  return score;
+};
+
+
 
 
 // Function to calculate score for Lg Straight
@@ -289,7 +309,10 @@ render(){
               calcFoursScore={this.calcFoursScore}
               calcFivesScore={this.calcFivesScore}
               calcSixesScore={this.calcSixesScore}
+
+              calcThreeOfKind={this.calcThreeOfKind}
               calcFullHouse={this.calcFullHouse}
+
               calcChanceScore={this.calcChanceScore}
               {...this.state}/>
         </div>
