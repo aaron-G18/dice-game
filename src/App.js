@@ -272,7 +272,23 @@ calcFullHouse = () => {
 
 
 // Function to calculate score for "5 of a kind."
-
+calcFiveOfKind = () => {
+  let score = 0;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  let dice = {};
+  // Count frequency of each value for the dice and put into "dice" object.
+  for (let val of diceValuesArr) {
+    dice[val] = (dice[val] || 0) + 1;
+  };
+  // for each "key: value" pair in the created "dice" object, check if a value of 5 exists meaning you got at 5 of a kind.
+  for (let val in dice) {
+    if(dice[val] === 5) {
+      score = val * 5;
+    };
+  };
+  console.log("score = ", score);
+  return score;
+};
 
 
 // Function to calculate chance total (score of all die values)
