@@ -100,9 +100,9 @@ rollCount = (event) => {
   }
 };
 
-// Function to count frequency of each number in dice array.
-//(need to make a frequency counter to get thr frequencies of each possible die value to use in finding full house, 3 of a kind, 4 of a kind, and 5 of a kind)
-dieFrequency = () => {
+// Function to calculate score for a full house.
+// ** (need to make a frequency counter to get thr frequencies of each possible die value to use in finding full house, 3 of a kind, 4 of a kind, and 5 of a kind)
+calcFullHouse = () => {
   
 };
 
