@@ -189,10 +189,13 @@ calcSixesScore = () => {
 // Function to calculate score for a full house.
 // ** (need to make a frequency counter to get thr frequencies of each possible die value to use in finding full house, 3 of a kind, 4 of a kind, and 5 of a kind)
 calcFullHouse = () => {
+  let sum = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   let dice = {};
-  let has3ofKind = false;
-  let has2ofKind = false;
+  let hasThreeOfKind = false;
+  let hasTwoOfKind = false;
+  let threeOfKindSum = 0;
+  let twoOfKindSum = 0;
   for (let val of diceValuesArr) {
     dice[val] = (dice[val] || 0) + 1;
   };
@@ -202,15 +205,20 @@ calcFullHouse = () => {
 
   for (let val in dice) {
     if(dice[val] === 3) {
-      has3ofKind = true;
+      hasThreeOfKind = true;
+      threeOfKindSum = val * 3;
+      console.log("threeOfKindSum = ", threeOfKindSum);
     };
     if(dice[val] === 2) {
-      has2ofKind = true;
+      hasTwoOfKind = true;
     }
   };
 
-  console.log("has 3ofKind = ", has3ofKind);
-  console.log("has 2ofKind = ", has2ofKind);
+  console.log("has 3ofKind = ", hasThreeOfKind);
+  console.log("has 2ofKind = ", hasTwoOfKind);
+  if(hasTwoOfKind && hasThreeOfKind) {
+
+  }
   
 };
 
