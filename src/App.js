@@ -204,7 +204,7 @@ calcThreeOfKind = () => {
   for (let val of diceValuesArr) {
     dice[val] = (dice[val] || 0) + 1;
   };
-  // for each "key: value" pair in the created "dice" object, check if a value of 2 and 3 both exist (meaning a full house) and toggle the booleans for each.
+  // for each "key: value" pair in the created "dice" object, check if a value of 3 or higher exists meaning you got at least 3 of a kind.
   for (let val in dice) {
     if(dice[val] >= 3) {
       score = val * 3;
@@ -215,7 +215,23 @@ calcThreeOfKind = () => {
 };
 
 // Funtion to calculate score for 4 of a kind.
-
+calcFourOfKind = () => {
+  let score = 0;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  let dice = {};
+  // Count frequency of each value for the dice and put into "dice" object.
+  for (let val of diceValuesArr) {
+    dice[val] = (dice[val] || 0) + 1;
+  };
+  // for each "key: value" pair in the created "dice" object, check if a value of 4 or higher exists meaning you got at least 4 of a kind.
+  for (let val in dice) {
+    if(dice[val] >= 4) {
+      score = val * 4;
+    };
+  };
+  console.log("score = ", score);
+  return score;
+};
 
 // Function to calculate score for a full house.
 calcFullHouse = () => {
