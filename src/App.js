@@ -354,7 +354,8 @@ render(){
               calcThreeOfKind={this.calcThreeOfKind}
               calcFourOfKind={this.calcFourOfKind}
               calcFullHouse={this.calcFullHouse}
-
+              calcSmStraight={this.calcSmStraight}
+              
               calcFiveOfKind={this.calcFiveOfKind}
               calcChanceScore={this.calcChanceScore}
               />
