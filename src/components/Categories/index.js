@@ -153,7 +153,9 @@ function Categories(props) {
                         <td>
                             <h3 className="cat-label">Lg Straight (40 pts)</h3>
                         </td>
-                        <td>Score Here</td>
+                        <td>
+                            <button type="button" className="score-button" onClick={props.calcLgStraight}>Record Score</button>
+                        </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
