@@ -276,11 +276,13 @@ calcSmStraight = () => {
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   let newArr = [];
   diceValuesArr.sort();
+  // start at index 1 and check if the number before the current index is the same as the previous number, if not, push to newArr (removing duplicates from diceValuesArr)
   for (let i = 0; i < diceValuesArr.length; i++) {
     if (diceValuesArr[i] !== diceValuesArr[i-1]) {
       newArr.push(diceValuesArr[i]); 
     };
   };  
+  // loop over newArr and check for consecutive numbers, incrementing runCount for each consecutive number.
   for (let i = 0; i < newArr.length; i++) {
     if (newArr[i] === (newArr[i+1] - 1)) {
       runCount++;      
