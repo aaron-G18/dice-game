@@ -270,7 +270,13 @@ calcFullHouse = () => {
 
 
 // Function to calculate score for Sm Straight
-
+calcSmStraight = () => {
+  let score = 0;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  diceValuesArr.sort();
+  console.log(diceValuesArr);
+  return score;
+}
 
 // Function to calculate score for Lg Straight
 
