@@ -141,7 +141,9 @@ function Categories(props) {
                         <td>
                             <h3 className="cat-label">Sm Straight (30 pts)</h3>
                         </td>
-                        <td>Score Here</td>
+                        <td>
+                            <button type="button" className="score-button" onClick={props.calcSmStraight}>Record Score</button>
+                        </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
