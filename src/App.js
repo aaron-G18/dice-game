@@ -274,7 +274,21 @@ calcSmStraight = () => {
   let score = 0;
   let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
   diceValuesArr.sort();
-  console.log(diceValuesArr);
+  
+  let runCount = 1;
+  for (let i = 0; i < diceValuesArr.length; i++) {
+    
+    if (diceValuesArr[i] === (diceValuesArr[i+1] - 1)) {
+      runCount++;
+      console.log("runCount = ", runCount);
+    };
+  };
+  if (runCount >= 4) {
+    score = 30;
+  };
+  console.log("diceValuesArr = ", diceValuesArr);
+  
+  console.log("Sm Straight score = ", score);
   return score;
 }
 
@@ -355,7 +369,7 @@ render(){
               calcFourOfKind={this.calcFourOfKind}
               calcFullHouse={this.calcFullHouse}
               calcSmStraight={this.calcSmStraight}
-              
+
               calcFiveOfKind={this.calcFiveOfKind}
               calcChanceScore={this.calcChanceScore}
               />
