@@ -288,7 +288,22 @@ calcSmStraight = () => {
 }
 
 // Function to calculate score for Lg Straight
-
+calcLgStraight = () => {
+  let score = 0;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  diceValuesArr.sort();
+  let runCount = 1;
+  for (let i = 0; i < diceValuesArr.length; i++) {
+    if (diceValuesArr[i] === (diceValuesArr[i+1] - 1)) {
+      runCount++;      
+    };
+  };
+  if (runCount === 5) {
+    score = 40;
+  };  
+  console.log("Lg Straight score = ", score);
+  return score;
+}
 
 // Function to calculate score for "5 of a kind."
 calcFiveOfKind = () => {
