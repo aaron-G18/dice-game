@@ -272,11 +272,17 @@ calcFullHouse = () => {
 // Function to calculate score for Sm Straight
 calcSmStraight = () => {
   let score = 0;
-  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
-  diceValuesArr.sort();
   let runCount = 1;
+  let diceValuesArr = [this.state.d1Value, this.state.d2Value, this.state.d3Value, this.state.d4Value, this.state.d5Value];
+  let newArr = [];
+  diceValuesArr.sort();
   for (let i = 0; i < diceValuesArr.length; i++) {
-    if (diceValuesArr[i] === (diceValuesArr[i+1] - 1)) {
+    if (diceValuesArr[i] !== diceValuesArr[i-1]) {
+      newArr.push(diceValuesArr[i]); 
+    };
+  };  
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i] === (newArr[i+1] - 1)) {
       runCount++;      
     };
   };
@@ -285,7 +291,11 @@ calcSmStraight = () => {
   };  
   console.log("Sm Straight score = ", score);
   return score;
-}
+};
+
+
+
+
 
 // Function to calculate score for Lg Straight
 calcLgStraight = () => {
@@ -303,7 +313,7 @@ calcLgStraight = () => {
   };  
   console.log("Lg Straight score = ", score);
   return score;
-}
+};
 
 // Function to calculate score for "5 of a kind."
 calcFiveOfKind = () => {
@@ -330,7 +340,7 @@ calcChanceScore = () => {
   let score = (this.state.d1Value + this.state.d2Value + this.state.d3Value + this.state.d4Value + this.state.d5Value);
   console.log("Chance Sum = ", score);
   return score;
-}
+};
 
 
 // Add global event listener for keyup when App component mounts.
