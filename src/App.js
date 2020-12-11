@@ -132,6 +132,8 @@ calcAcesScore = () => {
     };
   };
   console.log("Aces score = ", score);
+  this.setState({acesScore: score});
+  this.calcBonusScore();
   return score;
 };
 
@@ -145,6 +147,8 @@ calcTwosScore = () => {
     };
   };
   console.log("Twos score = ", score);
+  this.setState({twosScore: score});
+  this.calcBonusScore();
   return score;
 };
 
@@ -158,6 +162,8 @@ calcThreesScore = () => {
     };
   };
   console.log("Threes score = ", score);
+  this.setState({threesScore: score});
+  this.calcBonusScore();
   return score;
 };
 
@@ -171,6 +177,8 @@ calcFoursScore = () => {
     };
   };
   console.log("Fours score = ", score);
+  this.setState({foursScore: score});
+  this.calcBonusScore();
   return score;
 };
 
@@ -184,6 +192,8 @@ calcFivesScore = () => {
     };
   };
   console.log("Fives score = ", score);
+  this.setState({fivesScore: score});
+  this.calcBonusScore();
   return score;
 };
 
@@ -197,16 +207,18 @@ calcSixesScore = () => {
     };
   };
   console.log("Sixes score = ", score);
+  this.setState({sixesScore: score});
+  this.calcBonusScore();
   return score;
 };
 
 // Function to calculate if you get the bonus or not.
 // Need to check the sum of aces through sixes and see if it is over 63. If so, they get the bonus. If not, no bonus.
-calcChanceScore = () => {
+calcBonusScore = () => {
   let topScores = [this.state.acesScore, this.state.twosScore, this.state.threesScore, this.state.foursScore, this.state.fivesScore, this.state.sixesScore];
-  let topSum = topScores.reduce(this.sumFunc)
+  let topSum = topScores.reduce(this.sumFunc);
   console.log("topSum = ", topSum);
-  this.setState({topSum: topSum})
+  this.setState({topSum: topSum});
 };
 
 sumFunc = (total, num) => {
