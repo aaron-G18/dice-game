@@ -29,6 +29,13 @@ class App extends Component {
       foursScore: 0,
       fivesScore: 0,
       sixesScore: 0,
+      threeKindScore: 0,
+      fourKindScore: 0,
+      fullHouseScore: 0,
+      smStrScore: 0,
+      lgStrScore: 0,
+      fiveKindScore: 0,
+      chanceScore: 0,
     };  
   }
 
