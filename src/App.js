@@ -42,6 +42,7 @@ class App extends Component {
 //////// ****** TO DO LIST ********* ////////////
 /////////////////////////////////////////////////
 // - Will need to make functionality for locking out scoring when you record a score until you roll again.
+// - In the record score functions: need to update score in state, remove the record score button and replace with score, and need to reset the roll count and re-add the event listener for roll count.
 // - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
 // - Instructions. Maybe a pop-up modal from a button?
 
@@ -119,11 +120,6 @@ rollCount = (event) => {
     })
   }
 };
-
-
-
-
-
 
 // Function to calculate score for Aces (pass function to component to be on click for score button)
 calcAcesScore = () => {
