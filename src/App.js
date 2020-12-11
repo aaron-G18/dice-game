@@ -30,6 +30,7 @@ class App extends Component {
       fivesScore: 0,
       sixesScore: 0,
       topSum: 0,
+      bonusScore: 0,
       threeKindScore: 0,
       fourKindScore: 0,
       fullHouseScore: 0,
@@ -213,6 +214,10 @@ calcBonusScore = () => {
   let topSum = topScores.reduce(this.sumFunc);
   console.log("topSum = ", topSum);
   this.setState({topSum: topSum});
+  if (topSum > 63) {
+    this.setState({bonusScore: 35})
+  }
+  
 };
 
 sumFunc = (total, num) => {
