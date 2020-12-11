@@ -197,6 +197,7 @@ calcSixesScore = () => {
 };
 
 // Function to calculate if you get the bonus or not.
+// Need to check the sum of aces through sixes and see if it is over 63. If so, they get the bonus. If not, no bonus.
 
 
 // Function to calculate score for 3 of a kind.
@@ -267,8 +268,6 @@ calcFullHouse = () => {
   return score;
 };
 
-
-
 // Function to calculate score for Sm Straight
 calcSmStraight = () => {
   let score = 0;
@@ -294,10 +293,6 @@ calcSmStraight = () => {
   console.log("Sm Straight score = ", score);
   return score;
 };
-
-
-
-
 
 // Function to calculate score for Lg Straight
 calcLgStraight = () => {
