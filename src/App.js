@@ -123,6 +123,16 @@ rollCount = (event) => {
   }
 };
 
+
+
+// Function to reset dice (roll count and event listener)
+/////
+//////
+/////
+
+
+
+
 // Function to calculate score for Aces (pass function to component to be on click for score button)
 calcAcesScore = () => {
   let score = 0;
@@ -133,6 +143,7 @@ calcAcesScore = () => {
     };
   };
   console.log("Aces score = ", score);
+  // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({acesScore: score}, () => {this.calcBonusScore()});
   return score;
 };
@@ -147,6 +158,7 @@ calcTwosScore = () => {
     };
   };
   console.log("Twos score = ", score);
+  // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({twosScore: score}, () => {this.calcBonusScore()});
   return score;
 };
@@ -161,6 +173,7 @@ calcThreesScore = () => {
     };
   };
   console.log("Threes score = ", score);
+  // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({threesScore: score}, () => {this.calcBonusScore()});
   return score;
 };
@@ -175,6 +188,7 @@ calcFoursScore = () => {
     };
   };
   console.log("Fours score = ", score);
+  // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({foursScore: score}, () => {this.calcBonusScore()});
   return score;
 };
@@ -189,6 +203,7 @@ calcFivesScore = () => {
     };
   };
   console.log("Fives score = ", score);
+  // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({fivesScore: score}, () => {this.calcBonusScore()});
   return score;
 };
@@ -203,6 +218,7 @@ calcSixesScore = () => {
     };
   };
   console.log("Sixes score = ", score);
+  // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({sixesScore: score}, () => {this.calcBonusScore()});
   return score;
 };
@@ -217,9 +233,9 @@ calcBonusScore = () => {
   if (topSum > 63) {
     this.setState({bonusScore: 35})
   }
-  
 };
 
+// Funtion for reduce method above to sum the array.
 sumFunc = (total, num) => {
   return total + num;
 };
