@@ -132,8 +132,7 @@ calcAcesScore = () => {
     };
   };
   console.log("Aces score = ", score);
-  this.setState({acesScore: score});
-  this.calcBonusScore();
+  this.setState({acesScore: score}, this.calcBonusScore());
   return score;
 };
 
@@ -147,8 +146,7 @@ calcTwosScore = () => {
     };
   };
   console.log("Twos score = ", score);
-  this.setState({twosScore: score});
-  this.calcBonusScore();
+  this.setState({twosScore: score}, this.calcBonusScore());
   return score;
 };
 
@@ -162,8 +160,7 @@ calcThreesScore = () => {
     };
   };
   console.log("Threes score = ", score);
-  this.setState({threesScore: score});
-  this.calcBonusScore();
+  this.setState({threesScore: score}, this.calcBonusScore());
   return score;
 };
 
@@ -177,8 +174,7 @@ calcFoursScore = () => {
     };
   };
   console.log("Fours score = ", score);
-  this.setState({foursScore: score});
-  this.calcBonusScore();
+  this.setState({foursScore: score}, this.calcBonusScore());
   return score;
 };
 
@@ -192,8 +188,7 @@ calcFivesScore = () => {
     };
   };
   console.log("Fives score = ", score);
-  this.setState({fivesScore: score});
-  this.calcBonusScore();
+  this.setState({fivesScore: score}, this.calcBonusScore());
   return score;
 };
 
@@ -207,8 +202,7 @@ calcSixesScore = () => {
     };
   };
   console.log("Sixes score = ", score);
-  this.setState({sixesScore: score});
-  this.calcBonusScore();
+  this.setState({sixesScore: score}, () => {this.calcBonusScore()});
   return score;
 };
 
@@ -370,6 +364,11 @@ calcChanceScore = () => {
 componentDidMount () {
   document.addEventListener("keyup", this.rollCount);
 };
+
+// componentDidUpdate () {
+//   this.calcBonusScore();
+// };
+
 
 render(){
   return (
