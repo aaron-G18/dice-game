@@ -39,6 +39,13 @@ class App extends Component {
     };  
   }
 
+//////// ****** TO DO LIST ********* ////////////
+/////////////////////////////////////////////////
+// - Will need to make functionality for locking out scoring when you record a score until you roll again.
+// - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
+// - Instructions. Maybe a pop-up modal from a button?
+
+
 // * Functions to disable the rolling of each individual die (D1 - D5) by changing the trigger for the die.
 // * D1 roll disable funtion
 toggleD1Disabled = () => {
@@ -114,10 +121,6 @@ rollCount = (event) => {
 };
 
 
-//////// ****** TO DO LIST ********* ////////////
-/////////////////////////////////////////////////
-// - Will need to make functionality for locking out scoring when you record a score until you roll again.
-// - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
 
 
 
