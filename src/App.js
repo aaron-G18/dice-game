@@ -113,9 +113,6 @@ rollCount = (event) => {
 // - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
 
 
-// Function to check for "runs" to find Sm and Lg straights.
-//(sort array, then loop over array and check for consecutive numbers)
-
 
 
 // Function to calculate score for Aces (pass function to component to be on click for score button)
