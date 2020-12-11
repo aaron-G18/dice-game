@@ -93,7 +93,7 @@ function Categories(props) {
                             <h3 className="cat-label">Bonus</h3>
                             <p className="description">If sum of the above scores is 63 or over = 35</p>
                         </td>
-                        <td>Score Here</td>
+                        <td>{props.topSum > 63 ? 35 : "nope"}</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>

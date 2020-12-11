@@ -414,6 +414,7 @@ render(){
               calcLgStraight={this.calcLgStraight}
               calcFiveOfKind={this.calcFiveOfKind}
               calcChanceScore={this.calcChanceScore}
+              { ...this.state}
               />
         </div>
     </div>
