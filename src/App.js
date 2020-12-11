@@ -29,6 +29,7 @@ class App extends Component {
       foursScore: 0,
       fivesScore: 0,
       sixesScore: 0,
+      topSum: 0,
       threeKindScore: 0,
       fourKindScore: 0,
       fullHouseScore: 0,
@@ -201,6 +202,16 @@ calcSixesScore = () => {
 
 // Function to calculate if you get the bonus or not.
 // Need to check the sum of aces through sixes and see if it is over 63. If so, they get the bonus. If not, no bonus.
+calcChanceScore = () => {
+  let topScores = [this.state.acesScore, this.state.twosScore, this.state.threesScore, this.state.foursScore, this.state.fivesScore, this.state.sixesScore];
+  let topSum = topScores.reduce(this.sumFunc)
+  console.log("topSum = ", topSum);
+  this.setState({topSum: topSum})
+};
+
+sumFunc = (total, num) => {
+  return total + num;
+};
 
 
 // Function to calculate score for 3 of a kind.
