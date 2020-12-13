@@ -192,6 +192,7 @@ calcTwosScore = () => {
   this.setState({twosScore: score}, () => {
     this.calcBonusScore();
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -210,6 +211,7 @@ calcThreesScore = () => {
   this.setState({threesScore: score}, () => {
     this.calcBonusScore();
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -228,6 +230,7 @@ calcFoursScore = () => {
   this.setState({foursScore: score}, () => {
     this.calcBonusScore();
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -246,6 +249,7 @@ calcFivesScore = () => {
   this.setState({fivesScore: score}, () => {
     this.calcBonusScore();
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -264,6 +268,7 @@ calcSixesScore = () => {
   this.setState({sixesScore: score}, () => {
     this.calcBonusScore();
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -311,6 +316,7 @@ calcThreeOfKind = () => {
   console.log("score = ", score);
   this.setState({threeKindScore: score}, () => {
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -333,6 +339,7 @@ calcFourOfKind = () => {
   console.log("score = ", score);
   this.setState({fourKindScore: score}, () => {
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -366,6 +373,7 @@ calcFullHouse = () => {
   console.log("full house score = ", score);
   this.setState({fullHouseScore: score}, () => {
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -395,6 +403,7 @@ calcSmStraight = () => {
   console.log("Sm Straight score = ", score);
   this.setState({smStrScore: score}, () => {
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -416,6 +425,7 @@ calcLgStraight = () => {
   console.log("Lg Straight score = ", score);
   this.setState({lgStrScore: score}, () => {
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -438,6 +448,7 @@ calcFiveOfKind = () => {
   console.log("score = ", score);
   this.setState({fiveKindScore: score}, () => {
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -448,6 +459,7 @@ calcChanceScore = () => {
   console.log("Chance Sum = ", score);
   this.setState({chanceScore: score}, () => {
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
