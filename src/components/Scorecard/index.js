@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import ScoreButton from "../ScoreButton"
 
 function Scorecard(props) {
     return(
@@ -21,7 +22,10 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/one.png" alt="1 on die face"></img><h3 className="cat-label">   Aces = 1</h3>
                         </td>   
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcAcesScore} >Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcAcesScore}
+                            />
+                            {/* <button type="button" className="score-button" onClick={props.calcAcesScore} >Record Score</button> */}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
