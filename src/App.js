@@ -38,12 +38,13 @@ class App extends Component {
       lgStrScore: 0,
       fiveKindScore: 0,
       chanceScore: 0,
+      totalScore: 0
     };  
   }
 
 //////// ****** TO DO LIST ********* ////////////
 /////////////////////////////////////////////////
-// - finish putting setState for all the scores in the calc score funtions.
+// - add call back function into setStates to calculate total score for all categories.
 // - Will need to make functionality for locking out scoring when you record a score until you roll again.
 // - In the record score functions: need to update score in state, remove the record score button and replace with score, and need to reset the roll count and re-add the event listener for roll count.
 // - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
