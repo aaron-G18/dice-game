@@ -50,7 +50,9 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/three.png" alt="3 on die face"></img><h3 className="cat-label">   Threes = 3</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcThreesScore} >Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcThreesScore}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -62,7 +64,9 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/four.png" alt="4 on die face"></img><h3 className="cat-label">   Fours = 4</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcFoursScore}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcFoursScore}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -74,7 +78,9 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/five.png" alt="5 on die face"></img><h3 className="cat-label">   Fives = 5</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcFivesScore}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcFivesScore}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -86,7 +92,9 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/six.png" alt="6 on die face"></img><h3 className="cat-label">   Sixes = 6</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcSixesScore}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcSixesScore}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -110,7 +118,9 @@ function Scorecard(props) {
                             <p className="description">Sum of the three matching dice values</p>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcThreeOfKind}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcThreeOfKind}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -123,7 +133,9 @@ function Scorecard(props) {
                             <p className="description">Sum of the four matching dice values</p>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcFourOfKind}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcFourOfKind}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -135,7 +147,9 @@ function Scorecard(props) {
                             <h3 className="cat-label">Full House (25 pts)</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcFullHouse}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcFullHouse}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -147,7 +161,9 @@ function Scorecard(props) {
                             <h3 className="cat-label">Sm Straight (30 pts)</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcSmStraight}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcSmStraight}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -159,7 +175,9 @@ function Scorecard(props) {
                             <h3 className="cat-label">Lg Straight (40 pts)</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcLgStraight}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcLgStraight}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -172,7 +190,9 @@ function Scorecard(props) {
                             <p className="description">You know what it's called  ;)</p> 
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcFiveOfKind}>Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcFiveOfKind}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -184,7 +204,9 @@ function Scorecard(props) {
                             <h3 className="cat-label">Chance</h3>
                         </td>
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcChanceScore} >Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcChanceScore}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>

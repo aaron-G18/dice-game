@@ -43,10 +43,12 @@ class App extends Component {
 
 //////// ****** TO DO LIST ********* ////////////
 /////////////////////////////////////////////////
+// - finish putting setState for all the scores in the calc score funtions.
 // - Will need to make functionality for locking out scoring when you record a score until you roll again.
 // - In the record score functions: need to update score in state, remove the record score button and replace with score, and need to reset the roll count and re-add the event listener for roll count.
 // - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
 // - Instructions. Maybe a pop-up modal from a button?
+
 
 
 // * Functions to disable the rolling of each individual die (D1 - D5) by changing the trigger for the die.
@@ -257,6 +259,7 @@ calcThreeOfKind = () => {
     };
   };
   console.log("score = ", score);
+  this.setState({threeKindScore: score});
   return score;
 };
 
@@ -276,6 +279,7 @@ calcFourOfKind = () => {
     };
   };
   console.log("score = ", score);
+  this.setState({fourKindScore: score});
   return score;
 };
 
@@ -306,6 +310,7 @@ calcFullHouse = () => {
     score = 0;
   };
   console.log("full house score = ", score);
+  this.setState({fullHouseScore: score});
   return score;
 };
 
@@ -332,6 +337,7 @@ calcSmStraight = () => {
     score = 30;
   };  
   console.log("Sm Straight score = ", score);
+  this.setState({smStrScore: score});
   return score;
 };
 
@@ -350,6 +356,7 @@ calcLgStraight = () => {
     score = 40;
   };  
   console.log("Lg Straight score = ", score);
+  this.setState({lgStrScore: score});
   return score;
 };
 
@@ -369,6 +376,7 @@ calcFiveOfKind = () => {
     };
   };
   console.log("score = ", score);
+  this.setState({fiveKindScore: score});
   return score;
 };
 
@@ -377,6 +385,7 @@ calcFiveOfKind = () => {
 calcChanceScore = () => {
   let score = (this.state.d1Value + this.state.d2Value + this.state.d3Value + this.state.d4Value + this.state.d5Value);
   console.log("Chance Sum = ", score);
+  this.setState({chanceScore: score});
   return score;
 };
 
