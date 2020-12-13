@@ -42,7 +42,7 @@ function Scorecard(props) {
                                 <ScoreButton 
                                     clickFunction={props.calcTwosScore}
                                 /> : 
-                                props.acesScore}
+                                props.twosScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -54,9 +54,11 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/three.png" alt="3 on die face"></img><h3 className="cat-label">   Threes = 3</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcThreesScore}
-                            />
+                            {props.threesScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcThreesScore}
+                                /> : 
+                                props.threesScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -68,9 +70,11 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/four.png" alt="4 on die face"></img><h3 className="cat-label">   Fours = 4</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcFoursScore}
-                            />
+                            {props.foursScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcFoursScore}
+                                /> : 
+                                props.foursScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -82,9 +86,11 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/five.png" alt="5 on die face"></img><h3 className="cat-label">   Fives = 5</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcFivesScore}
-                            />
+                            {props.fivesScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcFivesScore}
+                                /> : 
+                                props.fivesScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -96,9 +102,11 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/six.png" alt="6 on die face"></img><h3 className="cat-label">   Sixes = 6</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcSixesScore}
-                            />
+                            {props.sixesScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcSixesScore}
+                                /> : 
+                                props.sixesScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -122,9 +130,11 @@ function Scorecard(props) {
                             <p className="description">Sum of the three matching dice values</p>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcThreeOfKind}
-                            />
+                            {props.threeKindScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcThreeOfKind}
+                                /> : 
+                                props.threeKindScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -137,9 +147,11 @@ function Scorecard(props) {
                             <p className="description">Sum of the four matching dice values</p>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcFourOfKind}
-                            />
+                            {props.fourKindScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcFourOfKind}
+                                /> : 
+                                props.fourKindScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -151,9 +163,11 @@ function Scorecard(props) {
                             <h3 className="cat-label">Full House (25 pts)</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcFullHouse}
-                            />
+                            {props.fullHouseScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcFullHouse}
+                                /> : 
+                                props.fullHouseScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -165,9 +179,11 @@ function Scorecard(props) {
                             <h3 className="cat-label">Sm Straight (30 pts)</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcSmStraight}
-                            />
+                            {props.smStrScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcSmStraight}
+                                /> : 
+                                props.smStrScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -179,9 +195,11 @@ function Scorecard(props) {
                             <h3 className="cat-label">Lg Straight (40 pts)</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcLgStraight}
-                            />
+                            {props.lgStrScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcLgStraight}
+                                /> : 
+                                props.lgStrScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -194,9 +212,11 @@ function Scorecard(props) {
                             <p className="description">You know what it's called  ;)</p> 
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcFiveOfKind}
-                            />
+                            {props.fiveKindScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcFiveOfKind}
+                                /> : 
+                                props.fiveKindScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -208,9 +228,11 @@ function Scorecard(props) {
                             <h3 className="cat-label">Chance</h3>
                         </td>
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcChanceScore}
-                            />
+                            {props.chanceScore === null ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcChanceScore}
+                                /> : 
+                                props.chanceScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
