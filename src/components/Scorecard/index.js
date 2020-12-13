@@ -22,15 +22,11 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/one.png" alt="1 on die face"></img><h3 className="cat-label">   Aces = 1</h3>
                         </td>   
                         <td>
-
-                        {props.acesScore === "none" ?  
-                            <ScoreButton 
-                                clickFunction={props.calcAcesScore}
-                            /> : props.acesScore} 
-
-                            {/* <ScoreButton 
-                                clickFunction={props.calcAcesScore}
-                            /> */}
+                            {props.acesScore === "none" ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcAcesScore}
+                                /> : 
+                                props.acesScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -42,9 +38,11 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/two.png" alt="2 on die face"></img><h3 className="cat-label">   Twos = 2</h3>
                         </td>   
                         <td>
-                            <ScoreButton 
-                                clickFunction={props.calcTwosScore}
-                            />
+                            {props.twosScore === "none" ?  
+                                <ScoreButton 
+                                    clickFunction={props.calcTwosScore}
+                                /> : 
+                                props.acesScore}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
