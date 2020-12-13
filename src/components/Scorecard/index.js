@@ -25,7 +25,6 @@ function Scorecard(props) {
                             <ScoreButton 
                                 clickFunction={props.calcAcesScore}
                             />
-                            {/* <button type="button" className="score-button" onClick={props.calcAcesScore} >Record Score</button> */}
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
@@ -37,7 +36,9 @@ function Scorecard(props) {
                             <img className="die-img" src="./images/two.png" alt="2 on die face"></img><h3 className="cat-label">   Twos = 2</h3>
                         </td>   
                         <td>
-                            <button type="button" className="score-button" onClick={props.calcTwosScore} >Record Score</button>
+                            <ScoreButton 
+                                clickFunction={props.calcTwosScore}
+                            />
                         </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
