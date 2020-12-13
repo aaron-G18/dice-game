@@ -2,6 +2,8 @@
 
 This is a dice game similar to the classic dice game that rhymes "hot sea." ;) 
 
+This is still under construction. Many improvements to come... (multiplayer, mobile compatibility, etc.)
+
 ---
 
 Here is a link to the deployed site:
