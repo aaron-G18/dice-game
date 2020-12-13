@@ -147,7 +147,10 @@ calcAcesScore = () => {
   };
   console.log("Aces score = ", score);
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
-  this.setState({acesScore: score}, () => {this.calcBonusScore()});
+  this.setState({acesScore: score}, () => {
+    this.calcBonusScore();
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -162,7 +165,10 @@ calcTwosScore = () => {
   };
   console.log("Twos score = ", score);
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
-  this.setState({twosScore: score}, () => {this.calcBonusScore()});
+  this.setState({twosScore: score}, () => {
+    this.calcBonusScore();
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -213,7 +219,10 @@ calcFivesScore = () => {
   };
   console.log("Fives score = ", score);
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
-  this.setState({fivesScore: score}, () => {this.calcBonusScore()});
+  this.setState({fivesScore: score}, () => {
+    this.calcBonusScore();
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -228,7 +237,10 @@ calcSixesScore = () => {
   };
   console.log("Sixes score = ", score);
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
-  this.setState({sixesScore: score}, () => {this.calcBonusScore()});
+  this.setState({sixesScore: score}, () => {
+    this.calcBonusScore();
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -273,7 +285,9 @@ calcThreeOfKind = () => {
     };
   };
   console.log("score = ", score);
-  this.setState({threeKindScore: score});
+  this.setState({threeKindScore: score}, () => {
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -293,7 +307,9 @@ calcFourOfKind = () => {
     };
   };
   console.log("score = ", score);
-  this.setState({fourKindScore: score});
+  this.setState({fourKindScore: score}, () => {
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -324,7 +340,9 @@ calcFullHouse = () => {
     score = 0;
   };
   console.log("full house score = ", score);
-  this.setState({fullHouseScore: score});
+  this.setState({fullHouseScore: score}, () => {
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -351,7 +369,9 @@ calcSmStraight = () => {
     score = 30;
   };  
   console.log("Sm Straight score = ", score);
-  this.setState({smStrScore: score});
+  this.setState({smStrScore: score}, () => {
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -370,7 +390,9 @@ calcLgStraight = () => {
     score = 40;
   };  
   console.log("Lg Straight score = ", score);
-  this.setState({lgStrScore: score});
+  this.setState({lgStrScore: score}, () => {
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -390,7 +412,9 @@ calcFiveOfKind = () => {
     };
   };
   console.log("score = ", score);
-  this.setState({fiveKindScore: score});
+  this.setState({fiveKindScore: score}, () => {
+    this.calcTotalScore();
+  });
   return score;
 };
 
@@ -399,7 +423,9 @@ calcFiveOfKind = () => {
 calcChanceScore = () => {
   let score = (this.state.d1Value + this.state.d2Value + this.state.d3Value + this.state.d4Value + this.state.d5Value);
   console.log("Chance Sum = ", score);
-  this.setState({chanceScore: score});
+  this.setState({chanceScore: score}, () => {
+    this.calcTotalScore();
+  });
   return score;
 };
 
