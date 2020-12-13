@@ -25,6 +25,7 @@ function Scorecard(props) {
                             {props.acesScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcAcesScore}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.acesScore}
                         </td>
@@ -41,6 +42,7 @@ function Scorecard(props) {
                             {props.twosScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcTwosScore}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.twosScore}
                         </td>
@@ -57,6 +59,7 @@ function Scorecard(props) {
                             {props.threesScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcThreesScore}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.threesScore}
                         </td>
@@ -73,6 +76,7 @@ function Scorecard(props) {
                             {props.foursScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcFoursScore}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.foursScore}
                         </td>
@@ -89,6 +93,7 @@ function Scorecard(props) {
                             {props.fivesScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcFivesScore}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.fivesScore}
                         </td>
@@ -105,6 +110,7 @@ function Scorecard(props) {
                             {props.sixesScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcSixesScore}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.sixesScore}
                         </td>
@@ -133,6 +139,7 @@ function Scorecard(props) {
                             {props.threeKindScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcThreeOfKind}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.threeKindScore}
                         </td>
@@ -150,6 +157,7 @@ function Scorecard(props) {
                             {props.fourKindScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcFourOfKind}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.fourKindScore}
                         </td>
@@ -166,6 +174,7 @@ function Scorecard(props) {
                             {props.fullHouseScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcFullHouse}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.fullHouseScore}
                         </td>
@@ -182,6 +191,7 @@ function Scorecard(props) {
                             {props.smStrScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcSmStraight}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.smStrScore}
                         </td>
@@ -198,6 +208,7 @@ function Scorecard(props) {
                             {props.lgStrScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcLgStraight}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.lgStrScore}
                         </td>
@@ -215,6 +226,7 @@ function Scorecard(props) {
                             {props.fiveKindScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcFiveOfKind}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.fiveKindScore}
                         </td>
@@ -231,6 +243,7 @@ function Scorecard(props) {
                             {props.chanceScore === null ?  
                                 <ScoreButton 
                                     clickFunction={props.calcChanceScore}
+                                    firstRoll={props.firstRoll}
                                 /> : 
                                 props.chanceScore}
                         </td>
