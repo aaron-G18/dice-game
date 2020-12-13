@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './App.css';
 import Dice from 'react-dice-roll';
-import Categories from "./components/Categories";
+import Scorecard from "./components/Scorecard";
 
 class App extends Component {
   constructor(props) {
@@ -420,7 +420,7 @@ render(){
         </div>
         </div>
           <div className="categories-container">
-            <Categories 
+            <Scorecard 
               calcAcesScore={this.calcAcesScore}
               calcTwosScore={this.calcTwosScore}
               calcThreesScore={this.calcThreesScore}

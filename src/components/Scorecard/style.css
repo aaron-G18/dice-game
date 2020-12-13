@@ -1,0 +1,62 @@
+table, th, td {
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 2vw;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+tr {
+    min-height: 50px;
+}
+
+#blank-th {
+    border: none;
+}
+
+.categories {  
+    margin-top: 240px;
+    clear: both;   
+}
+
+.cat {
+    width: 20%; 
+    height: 100%;
+    border: 1px solid white;
+    padding: 10px; 
+    float: left;
+}
+
+.cat-label {
+    clear: both;
+    display: inline;
+    vertical-align: middle;
+    font-size: 2vw;    
+}
+
+.die-img {
+    vertical-align: middle;
+    width: 15%;
+    
+}
+
+.score {
+    display: inline-block;
+}
+
+
+.description {
+    font-size: 1.5vw;
+}
+
+.clear {
+    clear: both;
+}
+
+.score-button:hover {
+    cursor: pointer;
+}

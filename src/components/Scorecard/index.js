@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Categories(props) {
+function Scorecard(props) {
     return(
         <div className="categories">
             <table>
@@ -201,4 +201,4 @@ function Categories(props) {
     );
 };
 
-export default Categories;
+export default Scorecard;
