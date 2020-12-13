@@ -1,8 +1,3 @@
-https://www.npmjs.com/package/react-dice-roll
-react-dice-roll (npm library)
-
-
-
 # Dice-Game
 
 This is a dice game similar to the classic dice game that rhymes "hot sea." ;) 
