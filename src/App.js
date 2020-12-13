@@ -179,7 +179,7 @@ calcThreesScore = () => {
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({threesScore: score}, () => {
     this.calcBonusScore();
-    this.calcTotalScore():
+    this.calcTotalScore();
   });
   return score;
 };
@@ -197,7 +197,7 @@ calcFoursScore = () => {
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
   this.setState({foursScore: score}, () => {
     this.calcBonusScore();
-    this.calcTotalScore():
+    this.calcTotalScore();
   });
   return score;
 };
