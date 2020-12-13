@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dice-game%20/static/css/main.b76dff7f.chunk.css",
-    "main.js": "/dice-game%20/static/js/main.2158b1a6.chunk.js",
-    "main.js.map": "/dice-game%20/static/js/main.2158b1a6.chunk.js.map",
-    "runtime-main.js": "/dice-game%20/static/js/runtime-main.c688c376.js",
-    "runtime-main.js.map": "/dice-game%20/static/js/runtime-main.c688c376.js.map",
-    "static/js/2.b61a19ad.chunk.js": "/dice-game%20/static/js/2.b61a19ad.chunk.js",
-    "static/js/2.b61a19ad.chunk.js.map": "/dice-game%20/static/js/2.b61a19ad.chunk.js.map",
-    "static/js/3.2b443eeb.chunk.js": "/dice-game%20/static/js/3.2b443eeb.chunk.js",
-    "static/js/3.2b443eeb.chunk.js.map": "/dice-game%20/static/js/3.2b443eeb.chunk.js.map",
-    "index.html": "/dice-game%20/index.html",
-    "static/css/main.b76dff7f.chunk.css.map": "/dice-game%20/static/css/main.b76dff7f.chunk.css.map",
-    "static/js/2.b61a19ad.chunk.js.LICENSE.txt": "/dice-game%20/static/js/2.b61a19ad.chunk.js.LICENSE.txt"
+    "main.css": "/dice-game/static/css/main.b76dff7f.chunk.css",
+    "main.js": "/dice-game/static/js/main.2158b1a6.chunk.js",
+    "main.js.map": "/dice-game/static/js/main.2158b1a6.chunk.js.map",
+    "runtime-main.js": "/dice-game/static/js/runtime-main.c6aa1c09.js",
+    "runtime-main.js.map": "/dice-game/static/js/runtime-main.c6aa1c09.js.map",
+    "static/js/2.b61a19ad.chunk.js": "/dice-game/static/js/2.b61a19ad.chunk.js",
+    "static/js/2.b61a19ad.chunk.js.map": "/dice-game/static/js/2.b61a19ad.chunk.js.map",
+    "static/js/3.2b443eeb.chunk.js": "/dice-game/static/js/3.2b443eeb.chunk.js",
+    "static/js/3.2b443eeb.chunk.js.map": "/dice-game/static/js/3.2b443eeb.chunk.js.map",
+    "index.html": "/dice-game/index.html",
+    "static/css/main.b76dff7f.chunk.css.map": "/dice-game/static/css/main.b76dff7f.chunk.css.map",
+    "static/js/2.b61a19ad.chunk.js.LICENSE.txt": "/dice-game/static/js/2.b61a19ad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c688c376.js",
+    "static/js/runtime-main.c6aa1c09.js",
     "static/js/2.b61a19ad.chunk.js",
     "static/css/main.b76dff7f.chunk.css",
     "static/js/main.2158b1a6.chunk.js"
