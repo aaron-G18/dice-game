@@ -56,55 +56,75 @@ class App extends Component {
 // * D1 roll disable funtion
 toggleD1Disabled = () => {
   if (this.state.d1Trigger === "r") {
-    this.setState({d1Trigger: "nope"});
-    this.setState({d1ButtonText: "Release"});
+    this.setState({
+      d1Trigger: "nope",
+      d1ButtonText: "Release"
+    });
   } else {
-    this.setState({d1Trigger: "r"});
-    this.setState({d1ButtonText: "Hold"});
+    this.setState({
+      d1Trigger: "r",
+      d1ButtonText: "Hold"
+    });
   }
 };
 
 // * D2 rolldisable funtion
 toggleD2Disabled = () => {
   if (this.state.d2Trigger === "r") {
-    this.setState({d2Trigger: "nope"});
-    this.setState({d2ButtonText: "Release"});
+    this.setState({
+      d2Trigger: "nope",
+      d2ButtonText: "Release"
+    });
   } else {
-    this.setState({d2Trigger: "r"});
-    this.setState({d2ButtonText: "Hold"});
+    this.setState({
+      d2Trigger: "r",
+      d2ButtonText: "Hold"
+    });
   }
 };
 
 // * D3 roll disable funtion
 toggleD3Disabled = () => {
   if (this.state.d3Trigger === "r") {
-    this.setState({d3Trigger: "nope"});
-    this.setState({d3ButtonText: "Release"});
+    this.setState({
+      d3Trigger: "nope",
+      d3ButtonText: "Release"
+    });
   } else {
-    this.setState({d3Trigger: "r"});
-    this.setState({d3ButtonText: "Hold"});
+    this.setState({
+      d3Trigger: "r",
+      d3ButtonText: "Hold"
+    });
   }
 };
 
 // * D4 roll disable funtion
 toggleD4Disabled = () => {
   if (this.state.d4Trigger === "r") {
-    this.setState({d4Trigger: "nope"});
-    this.setState({d4ButtonText: "Release"});
+    this.setState({
+      d4Trigger: "nope",
+      d4ButtonText: "Release"
+    });
   } else {
-    this.setState({d4Trigger: "r"});
-    this.setState({d4ButtonText: "Hold"});
+    this.setState({
+      d4Trigger: "r",
+      d4ButtonText: "Hold"
+    });
   }
 };
 
 // * D5 roll disable funtion
 toggleD5Disabled = () => {
   if (this.state.d5Trigger === "r") {
-    this.setState({d5Trigger: "nope"});
-    this.setState({d5ButtonText: "Release"});
+    this.setState({
+      d5Trigger: "nope",
+      d5ButtonText: "Release"
+    });
   } else {
-    this.setState({d5Trigger: "r"});
-    this.setState({d5ButtonText: "Hold"});
+    this.setState({
+      d5Trigger: "r",
+      d5ButtonText: "Hold"
+    });
   }
 };
 
