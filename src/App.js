@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       rollsLeft: 3,
+      firstRoll: true,
       d1Trigger: "r",
       d2Trigger: "r",
       d3Trigger: "r",
@@ -44,7 +45,7 @@ class App extends Component {
 
 //////// ****** TO DO LIST ********* ////////////
 /////////////////////////////////////////////////
-// 
+// - need to reset the dice when score is recorded (release all held and reset roll count)
 // - Will need to make functionality for locking out scoring when you record a score until you roll again.
 // - In the record score functions: need to remove the record score button and replace with score, and need to reset the roll count and re-add the event listener for roll count.
 // - Will need to hide the hold dice buttons on initial page load so they don't hold on default value (values 0, die faces show 6's)
@@ -112,7 +113,10 @@ toggleD5Disabled = () => {
 // Function to decrement the roll count if the keyup event is the "r" key and to "lock out" dice rolling if 0 rolls left by changing the trigger of all the dice.
 rollCount = (event) => {
   if (event.key === "r") {
-    this.setState({rollsLeft: (this.state.rollsLeft - 1)});
+    this.setState({
+      rollsLeft: (this.state.rollsLeft - 1),
+      firstRoll: false
+    });
   }
   if (this.state.rollsLeft === 0) {
     document.removeEventListener("keyup", this.rollCount);
@@ -129,6 +133,15 @@ rollCount = (event) => {
 
 
 // Function to reset dice (roll count and event listener)
+resetDice = () => {
+  // add back the event listener
+  document.addEventListener("keyup", this.rollCount);
+  // reset roll count
+  this.setState({rollsLeft: 3});
+  // reset all the hold/release buttons 
+  this.setState({d1Trigger: "r"});
+  this.setState({d1ButtonText: "Hold"});
+};
 /////
 //////
 /////
@@ -150,6 +163,7 @@ calcAcesScore = () => {
   this.setState({acesScore: score}, () => {
     this.calcBonusScore();
     this.calcTotalScore();
+    this.resetDice();
   });
   return score;
 };
@@ -442,23 +456,23 @@ render(){
           <h2>Rolls left: {this.state.rollsLeft}</h2>
           <div className={this.state.d1ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => this.setState({d1Value: value})} size="50" triggers={this.state.d1Trigger} />
-            <button type="button" className="roll-button" onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
+            <button type="button" className={this.state.firstRoll ? "roll-button hide" : "roll-button"} onClick={this.toggleD1Disabled}>{this.state.d1ButtonText}</button>
           </div>
           <div className={this.state.d2ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => this.setState({d2Value: value})} size="50" triggers={this.state.d2Trigger} />
-            <button type="button" className="roll-button" onClick={this.toggleD2Disabled}>{this.state.d2ButtonText}</button>
+            <button type="button" className={this.state.firstRoll ? "roll-button hide" : "roll-button"} onClick={this.toggleD2Disabled}>{this.state.d2ButtonText}</button>
           </div>
           <div className={this.state.d3ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => this.setState({d3Value: value})} size="50" triggers={this.state.d3Trigger} />
-            <button type="button" className="roll-button" onClick={this.toggleD3Disabled}>{this.state.d3ButtonText}</button>
+            <button type="button" className={this.state.firstRoll ? "roll-button hide" : "roll-button"} onClick={this.toggleD3Disabled}>{this.state.d3ButtonText}</button>
           </div>
           <div className={this.state.d4ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => this.setState({d4Value: value})} size="50" triggers={this.state.d4Trigger} />
-            <button type="button" className="roll-button" onClick={this.toggleD4Disabled}>{this.state.d4ButtonText}</button>
+            <button type="button" className={this.state.firstRoll ? "roll-button hide" : "roll-button"} onClick={this.toggleD4Disabled}>{this.state.d4ButtonText}</button>
           </div>
           <div className={this.state.d5ButtonText === "Release" ? "die held" : "die"}>
             <Dice onRoll={(value) => this.setState({d5Value: value})} size="50" triggers={this.state.d5Trigger} />
-            <button type="button" className="roll-button" onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
+            <button type="button" className={this.state.firstRoll ? "roll-button hide" : "roll-button"} onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
           </div> 
         </div>
         </div>

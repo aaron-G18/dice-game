@@ -7,6 +7,10 @@ body {
   cursor: pointer;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 .sticky {
   border: 5px solid grey;
   background-color: #313131;
