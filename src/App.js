@@ -23,7 +23,7 @@ class App extends Component {
       d3Value: 0,
       d4Value: 0,
       d5Value: 0,
-      acesScore: 0,
+      acesScore: "none",
       twosScore: 0,
       threesScore: 0,
       foursScore: 0,
