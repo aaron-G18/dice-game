@@ -136,11 +136,21 @@ rollCount = (event) => {
 resetDice = () => {
   // add back the event listener
   document.addEventListener("keyup", this.rollCount);
-  // reset roll count
-  this.setState({rollsLeft: 3});
-  // reset all the hold/release buttons 
-  this.setState({d1Trigger: "r"});
-  this.setState({d1ButtonText: "Hold"});
+  // reset roll count and hold/release buttons
+  this.setState({
+    rollsLeft: 3,
+    d1Trigger: "r",
+    d1ButtonText: "Hold",
+    d2Trigger: "r",
+    d2ButtonText: "Hold",
+    d3Trigger: "r",
+    d3ButtonText: "Hold",
+    d4Trigger: "r",
+    d4ButtonText: "Hold",
+    d5Trigger: "r",
+    d5ButtonText: "Hold",
+    firstRoll: true
+  });
 };
 /////
 //////
