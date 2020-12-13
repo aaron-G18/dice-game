@@ -177,7 +177,10 @@ calcThreesScore = () => {
   };
   console.log("Threes score = ", score);
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
-  this.setState({threesScore: score}, () => {this.calcBonusScore()});
+  this.setState({threesScore: score}, () => {
+    this.calcBonusScore();
+    this.calcTotalScore():
+  });
   return score;
 };
 
@@ -192,7 +195,10 @@ calcFoursScore = () => {
   };
   console.log("Fours score = ", score);
   // set state then use calcBonusScore in the call back function so it waits until state is updated.
-  this.setState({foursScore: score}, () => {this.calcBonusScore()});
+  this.setState({foursScore: score}, () => {
+    this.calcBonusScore();
+    this.calcTotalScore():
+  });
   return score;
 };
 
@@ -238,7 +244,14 @@ calcBonusScore = () => {
   }
 };
 
-// Funtion for reduce method above to sum the array.
+// Funtion got calculate total score for all categories.
+calcTotalScore = () => {
+  let allScores = [this.state.acesScore, this.state.twosScore, this.state.threesScore, this.state.foursScore, this.state.fivesScore, this.state.sixesScore, this.state.bonusScore, this.state.threeKindScore, this.state.fourKindScore, this.state.fullHouseScore, this.state.smStrScore, this.state.lgStrScore, this.state.fiveKindScore, this.state.chanceScore];
+  let total = allScores.reduce(this.sumFunc);
+  this.setState({totalScore: total});
+};
+
+// Funtion for reduce methods above to sum the array.
 sumFunc = (total, num) => {
   return total + num;
 };
