@@ -217,7 +217,9 @@ function Scorecard(props) {
                         <td>
                             <h3 className="cat-label">Total Score</h3>
                         </td>
-                        <td>Score Here</td>
+                        <td>
+                            {props.totalScore}
+                        </td>
                         <td>Score Here</td>
                         <td>Score Here</td>
                         <td>Score Here</td>
