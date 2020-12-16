@@ -48,7 +48,8 @@ class App extends Component {
 // 
 // - Instructions. Maybe a pop-up modal from a button?
 // - Restart game button?
-// - high score? maybe stor a cookie with high score so persists?
+// - high score? maybe store a cookie with high score so persists?
+// - multi-player?
 
 
 
