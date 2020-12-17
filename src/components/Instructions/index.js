@@ -3,7 +3,9 @@ import "./style.css";
 
 function Instructions(props) {
     return(
-        <div>Instructions...</div>
+        <div className="instructions">
+            <p>Instructions...</p>
+        </div>
     );
 };
 
