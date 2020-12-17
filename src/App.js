@@ -56,12 +56,12 @@ class App extends Component {
 // * Functions to disable the rolling of each individual die (D1 - D5) by changing the trigger for the die.
 // * D1 roll disable funtion
 toggleD1Disabled = () => {
-  if (this.state.d1Trigger === "r") {
+  if (this.state.d1Trigger === "r" && this.state.rollsLeft > 0) {
     this.setState({
       d1Trigger: "nope",
       d1ButtonText: "Release"
     });
-  } else {
+  } else if (this.state.rollsLeft > 0) {
     this.setState({
       d1Trigger: "r",
       d1ButtonText: "Hold"
@@ -71,12 +71,12 @@ toggleD1Disabled = () => {
 
 // * D2 rolldisable funtion
 toggleD2Disabled = () => {
-  if (this.state.d2Trigger === "r") {
+  if (this.state.d2Trigger === "r" && this.state.rollsLeft > 0) {
     this.setState({
       d2Trigger: "nope",
       d2ButtonText: "Release"
     });
-  } else {
+  } else if (this.state.rollsLeft > 0){
     this.setState({
       d2Trigger: "r",
       d2ButtonText: "Hold"
@@ -86,12 +86,12 @@ toggleD2Disabled = () => {
 
 // * D3 roll disable funtion
 toggleD3Disabled = () => {
-  if (this.state.d3Trigger === "r") {
+  if (this.state.d3Trigger === "r" && this.state.rollsLeft > 0) {
     this.setState({
       d3Trigger: "nope",
       d3ButtonText: "Release"
     });
-  } else {
+  } else if (this.state.rollsLeft > 0){
     this.setState({
       d3Trigger: "r",
       d3ButtonText: "Hold"
@@ -101,12 +101,12 @@ toggleD3Disabled = () => {
 
 // * D4 roll disable funtion
 toggleD4Disabled = () => {
-  if (this.state.d4Trigger === "r") {
+  if (this.state.d4Trigger === "r" && this.state.rollsLeft > 0) {
     this.setState({
       d4Trigger: "nope",
       d4ButtonText: "Release"
     });
-  } else {
+  } else if (this.state.rollsLeft > 0){
     this.setState({
       d4Trigger: "r",
       d4ButtonText: "Hold"
@@ -116,12 +116,12 @@ toggleD4Disabled = () => {
 
 // * D5 roll disable funtion
 toggleD5Disabled = () => {
-  if (this.state.d5Trigger === "r") {
+  if (this.state.d5Trigger === "r" && this.state.rollsLeft > 0) {
     this.setState({
       d5Trigger: "nope",
       d5ButtonText: "Release"
     });
-  } else {
+  } else if (this.state.rollsLeft > 0){
     this.setState({
       d5Trigger: "r",
       d5ButtonText: "Hold"
