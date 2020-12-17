@@ -26,8 +26,8 @@ body {
 }
 
 .dice-container {
-  opacity: 1;
-  z-index: 2;
+  /* opacity: 1;
+  z-index: 2; */
   text-align: center;
   height: 160px;
   width: 420px;
@@ -35,6 +35,7 @@ body {
   padding: 10px;
   border: 1px solid white;
   border-radius: 35px;
+  background-color: black;
 }
 
 .die {
