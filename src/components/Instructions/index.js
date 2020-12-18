@@ -1,12 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 
 
 //////////  make instructions a modal pup-up  ////////////
 
 
-function Instructions(props) {
-    return(
+class Instructions extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showModal: false
+        };
+    }
+
+    /// functions here
+
+
+
+    render(){
+        return(
         <div className="instructions">
             <button>Instructions</button>
             <h2>How to play:</h2>
@@ -19,7 +31,8 @@ function Instructions(props) {
             <p>Small and Large Straights: Straights are runs of consecutive numbers (e.g. 1, 2, 3, 4). A small straight is 4 consecutive numbers (e.g. 2, 3, 4, 5) and is worth 30 points. A large straight is 5 consecutive numbers (e.g. 2, 3, 4, 5, 6) and is worth 40 points.</p>
             <p>Chance: The Chance category is simply the sum of all the dice.</p>
         </div>
-    );
+    
+    )};
 };
 
 export default Instructions;
