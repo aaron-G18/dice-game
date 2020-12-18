@@ -48,6 +48,7 @@ class App extends Component {
 /////////////////////////////////////////////////
 // 
 // - Instructions. Maybe a pop-up modal from a button?
+// - Move functions to separate script page and import it?
 // - Restart game button?
 // - high score? maybe store a cookie with high score so persists?
 // - multi-player?
