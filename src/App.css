@@ -30,6 +30,7 @@ body {
 
 .dice-container {
   /* text-align: center; */
+  flex: none;
   height: 160px;
   width: 420px;
   margin-right: 10%;
