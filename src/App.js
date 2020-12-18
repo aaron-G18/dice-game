@@ -46,6 +46,7 @@ class App extends Component {
 
 //////// ****** TO DO LIST ********* ////////////
 /////////////////////////////////////////////////
+/////////////////////////////////////////////////
 // 
 // - Instructions. Maybe a pop-up modal from a button?
 // - Restart game button?
@@ -495,6 +496,9 @@ render(){
   return (
     <div className="app">
       <div className="sticky">
+        <div>
+          <button>Instructions</button>
+        </div>
         <div className="dice-container">
           <h2>Rolls left: {this.state.rollsLeft}</h2>
           <div className={this.state.d1ButtonText === "Release" ? "die held" : "die"}>
@@ -517,6 +521,9 @@ render(){
             <Dice onRoll={(value) => this.setState({d5Value: value})} size="50" triggers={this.state.d5Trigger} />
             <button type="button" className={this.state.firstRoll ? "roll-button hide" : "roll-button"} onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
           </div> 
+        </div>
+        <div id="restart">
+          <button id="restart-button">Restart Game</button>
         </div>
       </div>
       <div className="categories-container">
