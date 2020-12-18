@@ -3,6 +3,7 @@ import './App.css';
 import Dice from 'react-dice-roll';
 import Scorecard from "./components/Scorecard";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -517,26 +518,25 @@ render(){
             <button type="button" className={this.state.firstRoll ? "roll-button hide" : "roll-button"} onClick={this.toggleD5Disabled}>{this.state.d5ButtonText}</button>
           </div> 
         </div>
-        </div>
-          <div className="categories-container">
-            <Scorecard 
-              calcAcesScore={this.calcAcesScore}
-              calcTwosScore={this.calcTwosScore}
-              calcThreesScore={this.calcThreesScore}
-              calcFoursScore={this.calcFoursScore}
-              calcFivesScore={this.calcFivesScore}
-              calcSixesScore={this.calcSixesScore}
-
-              calcThreeOfKind={this.calcThreeOfKind}
-              calcFourOfKind={this.calcFourOfKind}
-              calcFullHouse={this.calcFullHouse}
-              calcSmStraight={this.calcSmStraight}
-              calcLgStraight={this.calcLgStraight}
-              calcFiveOfKind={this.calcFiveOfKind}
-              calcChanceScore={this.calcChanceScore}
-              { ...this.state}
-              />
-        </div>
+      </div>
+      <div className="categories-container">
+        <Scorecard 
+          calcAcesScore={this.calcAcesScore}
+          calcTwosScore={this.calcTwosScore}
+          calcThreesScore={this.calcThreesScore}
+          calcFoursScore={this.calcFoursScore}
+          calcFivesScore={this.calcFivesScore}
+          calcSixesScore={this.calcSixesScore}
+          calcThreeOfKind={this.calcThreeOfKind}
+          calcFourOfKind={this.calcFourOfKind}
+          calcFullHouse={this.calcFullHouse}
+          calcSmStraight={this.calcSmStraight}
+          calcLgStraight={this.calcLgStraight}
+          calcFiveOfKind={this.calcFiveOfKind}
+          calcChanceScore={this.calcChanceScore}
+          { ...this.state}
+        />
+      </div>
     </div>
   )};
 }
