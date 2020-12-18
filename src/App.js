@@ -486,10 +486,17 @@ calcChanceScore = () => {
   return score;
 };
 
+// Function to reload page (restart game)
+reload = () => {
+  window.location.reload();
+};
+
 // Add global event listener for keyup when App component mounts.
 componentDidMount () {
   document.addEventListener("keyup", this.rollCount);
 };
+
+
 
 
 render(){
@@ -523,7 +530,7 @@ render(){
           </div> 
         </div>
         <div id="restart">
-          <button id="restart-button">Restart Game</button>
+          <button id="restart-button" onClick={this.reload}>Restart Game</button>
         </div>
       </div>
       <div className="categories-container">
