@@ -14,9 +14,16 @@ class Instructions extends Component {
     }
 
     /// functions here
+    showModal = () => {
+        this.setState({showModal: true});
+    };
+
+    hideModal = () => {
+        this.setState({showModal: false});
+    };
 
 
-
+    
     render(){
         return(
         <div className="instructions">
