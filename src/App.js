@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './App.css';
 import Dice from 'react-dice-roll';
 import Scorecard from "./components/Scorecard";
+import Instructions from "./components/Instructions";
 
 
 class App extends Component {
@@ -504,7 +505,7 @@ render(){
     <div className="app">
       <div className="sticky">
         <div>
-          <button>Instructions</button>
+          <Instructions />
         </div>
         <div className="dice-container">
           <h2>Rolls left: {this.state.rollsLeft}</h2>
