@@ -45,15 +45,6 @@ class App extends Component {
     };  
   }
 
-//////// ****** TO DO LIST ********* ////////////
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// 
-// - Instructions. Maybe a pop-up modal from a button?
-// - Restart game button?
-// - high score? maybe store a cookie with high score so persists?
-// - multi-player?
-
 
 
 // * Functions to disable the rolling of each individual die (D1 - D5) by changing the trigger for the die.
@@ -303,8 +294,10 @@ calcBonusScore = () => {
   let topSum = topScores.reduce(this.sumFunc);
   console.log("topSum = ", topSum);
   this.setState({topSum: topSum});
-  if (topSum > 63) {
-    this.setState({bonusScore: 35})
+  if (topSum >= 63) {
+    this.setState({bonusScore: 35}, () => {
+      this.calcTotalScore();
+    });
   }
 };
 

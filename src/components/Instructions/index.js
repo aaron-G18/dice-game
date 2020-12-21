@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import "./style.css";
 
 
-//////////  make instructions a modal pup-up  ////////////
-
-
 class Instructions extends Component {
     constructor(props) {
         super(props);
@@ -13,11 +10,12 @@ class Instructions extends Component {
         };
     }
 
-    /// functions here
+    // Function to show modal
     showModal = () => {
         this.setState({showModal: true});
     };
 
+    // Function to hide modal
     hideModal = () => {
         this.setState({showModal: false});
     };
