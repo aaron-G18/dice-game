@@ -29,6 +29,7 @@ class Instructions extends Component {
         <div className="instructions">
             <button onClick={this.showModal}>Instructions</button>
             <div className={this.state.showModal ? "show" : "hide"}>
+                <span className="close" onClick={this.hideModal}> &times; </span>
                 <h2>How to play:</h2>
                 <p>Each turn you are given 3 rolls. After the first roll, you are allowed to hold any die you want (or none) before the next roll. Holding a die will keep its value (will not roll with the next roll). You don't have to use all three of your rolls. At any time, after the first roll, you may record a score in the category of your choosing, but after your third roll in the turn you must choose a category to record a score in, even if it will result in 0 points scored. Once you record a score in a category, the next turn begins. Once all categories have been recorded, the game is over and your total score is displayed at the bottom of the scorecard.</p>
                 <h2>Scoring for Categories:</h2>
