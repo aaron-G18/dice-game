@@ -102,7 +102,7 @@ function Scorecard(props) {
                     <tr>
                         <td className="cat">
                             <h3 className="cat-label">Bonus</h3>
-                            <p className="description">If sum of the above scores is 63 or over = 35</p>
+                            <p className="description">(if sum of the above scores is 63 or higher = 35 pts)</p>
                         </td>
                         <td>{props.bonusScore === 35 ? 35 : <p className="description">not enough score above</p>}</td>
                     </tr>
@@ -110,7 +110,7 @@ function Scorecard(props) {
                     <tr>
                         <td className="cat">
                             <h3 className="cat-label">3 of a kind</h3>
-                            <p className="description">Sum of the three matching dice values</p>
+                            <p className="description">(sum of the three matching dice)</p>
                         </td>
                         <td>
                             {props.threeKindScore === null ?  
@@ -125,7 +125,7 @@ function Scorecard(props) {
                     <tr>
                         <td className="cat">
                             <h3 className="cat-label">4 of a kind</h3>
-                            <p className="description">Sum of the four matching dice values</p>
+                            <p className="description">(sum of the four matching dice)</p>
                         </td>
                         <td>
                             {props.fourKindScore === null ?  
@@ -139,7 +139,8 @@ function Scorecard(props) {
                 {/* Full House row */}
                     <tr>
                         <td className="cat">
-                            <h3 className="cat-label">Full House (25 pts)</h3>
+                            <h3 className="cat-label">Full House</h3>
+                            <p className="description">(25 pts)</p>
                         </td>
                         <td>
                             {props.fullHouseScore === null ?  
@@ -153,7 +154,8 @@ function Scorecard(props) {
                 {/* Sm Straight row */}
                     <tr>
                         <td className="cat">
-                            <h3 className="cat-label">Sm Straight (30 pts)</h3>
+                            <h3 className="cat-label">Sm Straight</h3>
+                            <p className="description">(30 pts)</p>
                         </td>
                         <td>
                             {props.smStrScore === null ?  
@@ -167,7 +169,8 @@ function Scorecard(props) {
                 {/* Lg Straight row */}
                     <tr>
                         <td className="cat">
-                            <h3 className="cat-label">Lg Straight (40 pts)</h3>
+                            <h3 className="cat-label">Lg Straight</h3>
+                            <p className="description">(40 pts)</p>
                         </td>
                         <td>
                             {props.lgStrScore === null ?  
@@ -181,8 +184,9 @@ function Scorecard(props) {
                 {/* 5 of a kind row */}
                     <tr>
                         <td className="cat">
-                            <h3 className="cat-label">*5 of a kind* (50 pts)</h3> 
-                            <p className="description">You know what it's called  ;)</p> 
+                            <h3 className="cat-label">* 5 of a kind *</h3> 
+                            <p className="description">You know what it's called  ;)</p>
+                            <p className="description">(50 pts)</p> 
                         </td>
                         <td>
                             {props.fiveKindScore === null ?  
@@ -197,6 +201,7 @@ function Scorecard(props) {
                     <tr>
                         <td className="cat">
                             <h3 className="cat-label">Chance</h3>
+                            <p className="description">(sum of all dice)</p>
                         </td>
                         <td>
                             {props.chanceScore === null ?  
