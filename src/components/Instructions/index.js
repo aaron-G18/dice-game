@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import "./style.css";
 
 
@@ -8,25 +9,50 @@ class Instructions extends Component {
         this.state = {
             showModal: false
         };
+        this.wrapperRef = React.createRef();
+        // this.setWrapperRef = this.setWrapperRef.bind(this);
+        // this.handleClickOutside = this.handleClickOutside.bind(this);
     }
 
     // Function to show modal
-    showModal = () => {
-        this.setState({showModal: true});
+    showModal = (event) => {
+        event.preventDefault();
+        this.setState({showModal: true}, () => {
+            this.wrapperRef.current.focus();
+            document.addEventListener("click", this.handleClickOutside, true);
+        });
+        
     };
 
     // Function to hide modal
     hideModal = () => {
+        document.removeEventListener("click", this.handleClickOutside, true);
         this.setState({showModal: false});
+        
     };
 
+    handleClickOutside = (event) => {
+        if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
+            this.hideModal();
+        }
+    };
+
+    
+
+    // componentDidMount() {
+    //     document.addEventListener("click", this.handleClickOutside);
+    // }
+
+    // componentWillUnmount() {
+    //     document.removeEventListener("click", this.handleClickOutside);
+    // }
 
     
     render(){
         return(
         <div className="instructions">
             <button onClick={this.showModal}>Instructions</button>
-            <div className={this.state.showModal ? "show" : "hide"}>
+            <div className={this.state.showModal ? "show" : "hide"} ref={this.wrapperRef}>
                 <span className="close" onClick={this.hideModal}> &times; </span>
                 <h2>How to play:</h2>
                 <p>Each turn you are given 3 rolls. Press the "r" key to roll. After the first roll, you are allowed to hold any die you want (or none) before the next roll. Holding a die will keep its value (will not roll with the next roll). You don't have to use all three of your rolls. At any time, after the first roll, you may record a score in the category of your choosing, but after your third roll in the turn you must choose a category to record a score in, even if it will result in 0 points scored. Once you record a score in a category, the next turn begins. Once all categories have been recorded, the game is over and your total score is displayed at the bottom of the scorecard.</p>
@@ -42,5 +68,7 @@ class Instructions extends Component {
     
     )};
 };
+
+
 
 export default Instructions;
