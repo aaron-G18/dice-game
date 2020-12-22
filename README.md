@@ -8,13 +8,13 @@ This is still under construction. Many improvements to come... (multiplayer, mob
 
 Here is a link to the deployed site:
 
-(deployed link here once deployed)
+[Aaron's Dice Game](https://aaron-g18.github.io/dice-game/)
 
 # Good Luck!
 
 ![Screenshot of Dice Game](https://user-images.githubusercontent.com/58674283/102834915-23db2d80-43aa-11eb-85e3-dfb92c8b24a2.png?raw=true "Dice Game")
 
-(screen shots of game here)
+
 
 ---
 
