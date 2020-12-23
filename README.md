@@ -1,8 +1,8 @@
 # Dice-Game
 
-This is a dice game similar to the classic dice game that rhymes "hot sea." ;) 
+This is a dice game similar to the classic dice game that rhymes with "hot sea." ;) 
 
-This is still under construction. Many improvements to come... (multiplayer, mobile compatibility, etc.)
+This is still under construction, but single player on a computer is available. Many improvements to come... (multiplayer, mobile compatibility, etc.)
 
 ---
 
@@ -18,7 +18,7 @@ Here is a link to the deployed site:
 
 ---
 
-The main focus of this dice game was to create a small project in react to continue practice and maintain proficiency with that library. It also seemed like a fun project and ultimately is a game that can be played for entertainment. 
+The main focus of this dice game was to create a small project in react to continue practice and increase proficiency with that library. It also seemed like a fun project and ultimately is a game that can be played for entertainment. 
 
 ---
 
